@@ -38,6 +38,40 @@ body {
     background-color: #fdfbf5;
 }
 
+
+
+h1 {
+    color: var(--c-dark-green);
+    font-family: var(--font-bodycopy);
+    font-size: 200px;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.1em; 
+    justify-content: center;
+}
+
+h2{
+    font-family: var(--font-title);
+    transform: translate(20rem, -22rem);
+}
+
+.p-tail{
+    color: var(--c-dark-green);
+    width: 98.6px;
+    height: 404.8px;
+    display: block;
+    margin-top: 0.1em;
+    transform: translateY(40px);
+}
+
+.highlight-l {
+    color: var(--c-light-green); 
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+
 .logo {
     width: 35px;
     height: 30.7px;
@@ -65,27 +99,89 @@ body {
     position: relative;
 }
 
+.badges {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 1; }
+
 .badges .badge {
     display: inline-block;
-    padding: 0.3em 0.8em;
+    padding: 6px 22px;
     margin: 0.3em;
-    border-radius: 10px;
-    font-size: 0.8em;
-    font-weight: bold;
+    border-radius: 5px;
+    font-size: 35px;
+    position: relative;
 }
 
 .badge.motion {
-    background-color: #c1d7b3;
+    position: absolute;
+    top: 0;
+    background-color: var(--c-light-green);
+    color: var(--c-beige);
+    margin-top: -16rem;
+    margin-left: -35rem;
 }
+.badge.motion::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: -5px;
+    width: 0;
+    height: 0;
+    border-top: 25px solid var(--c-light-green);
+    border-right: 25px solid transparent;
+    transform: rotate(-135deg);
+    transform-origin: center;
+}
+
 
 .badge.ux {
-    background-color: #2b3323;
-    color: white;
+    position: absolute;
+    top: 0;
+    background-color: var(--c-dark-green);
+    color: var(--c-beige);
+    margin-top: -20rem;
+    margin-left: 35rem;
+}
+.badge.ux::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: -5px;
+    width: 0;
+    height: 0;
+    border-top: 25px solid var(--c-dark-green);
+    border-left: 25px solid transparent;
+    transform: rotate(135deg);
+    transform-origin: center;
 }
 
+
 .badge.visual {
-    background-color: #f4d8d8;
+    position: absolute;
+    top: 0;
+    background-color: var(--c-pink);
+    margin-top: 3rem;
+    margin-left: -25rem;
 }
+.badge.visual::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid var(--c-pink);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; }
+
 
 .strip {
     background-color: #1f2b19;
