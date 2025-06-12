@@ -184,12 +184,37 @@ h2{
 
 
 .strip {
-    background-color: #1f2b19;
-    color: white;
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    background-color: var(--c-dark-green);
+    color: var(--c-beige);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding: 0.5rem 0;
+    position: relative;   
+    margin-top: -14rem;  
 }
+
+.strip-inner {
+    display: flex;
+    width: calc(16 * 200px);
+    animation: scroll 20s linear infinite;     }
+        
+
+
+.repeat {
+    flex: 0 0 200px;
+    margin-right: 50px;
+    white-space: nowrap;     }
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }     }
 
 .about {
     display: flex;
