@@ -415,25 +415,109 @@ margin-left: -42rem;
     display: flex;
     justify-content: center;
     margin-top: 15rem;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
 }
 
 
 .coming-soon {
     background-color: var(--c-dark-green);
-    color: var(--c-beige);
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 5rem 2rem;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
+
+.coming-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem; }
+
+
+.coming-soon::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--c-dark-green);
+    top: -15px;
+    left: 0;
+}
+
+.coming-soon::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: var(--c-dark-green);
+   top: -34px;
+    left: 0;     }
+
+
+
+.coming-soon--banner {
+    margin-top: 5rem;
+    font-size: 150px;
+    font-weight: bold;
+    color: var(--c-pink);
+    line-height: 1;
+    text-transform: uppercase;
+    transform: scaleY(1.5);
+    display: inline-block;
+
+    margin-bottom: 0;
+}
+
+
+.comming-soon-title {
+    font-family: var(--font-title);
+    font-size: 75px;
+    font-weight: 400;
+    max-width: 700px; 
+}
+
+.somming-soon--title-center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 
 .project-box {
     background-color: var(--c-light-green);
     color: var(--c-beige);
     padding: 2rem;
-    margin: 1rem auto;
-    max-width: 200px;
-    border-radius: 10px;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 0 1rem white;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    top: -300px;
+    margin-bottom: -200px;
 }
+
+
+.project-box h4 {
+    font-size: 75px;
+    margin: 0;     }
+
+.project-box p {
+    font-size: 150px;
+    font-weight: 600;
+    margin: 1rem 0 0;     }
+
+
+.project-box::before,
+.project-box::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
 
 .moodboard {
     padding: 2rem;
