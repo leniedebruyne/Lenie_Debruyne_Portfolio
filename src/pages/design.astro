@@ -2,7 +2,7 @@
 // design.astro
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/styles.css";
+import "../styles/design.css";
 ---
 
 <!doctype html>
@@ -37,59 +37,91 @@ import "../styles/styles.css";
   <Navigation />
 
   <!-- header -->
-  <header>
-    <h1>Visual Designer Portfolio</h1>
-    <p>I like design and experiences that feel intuitive & look amazing.</p>
-    <p>
-      As a visual designer, I believe that aesthetics are intrinsically linked
-      to usability and impact. My aim is to craft interfaces that are not only
-      beautiful but also strategically enhance the user's journey. I translate
-      brand identities and complex information into clean, intuitive, and
-      visually harmonious digital experiences.
-    </p>
-    <p>
-      I obsess over the details: typography, color palettes, spacing, and
-      iconography to ensure every element serves a purpose and contributes to a
-      cohesive, engaging visual language. My designs are built to be visually
-      compelling, emotionally resonant, and ultimately, effective in guiding
-      users and achieving project goals. I thrive on bringing a distinct visual
-      voice to every product, ensuring it stands out while seamlessly
-      integrating with the overall user experience.
-    </p>
-    <p>Welcome to the design page.</p>
-    <img src="cat.png" alt="cat with text" width="192" />
-  </header>
+  <section class="design--header">
+    <h1 class="design--header-title">
+      <span>Visual</span>
+      <span class="designer-word">Designer</span>
+      <span>PORTFO<span class="green-l">L</span>IO</span>
+    </h1>
+    <div class="design--header-text">
+      <p>
+        <em
+          >I like design and experiences that feel intuitive & look amazing.</em
+        >
+      </p>
+      <p>
+        As a visual designer, I believe that aesthetics are intrinsically linked
+        to <b>usability and impact</b>. My aim is to craft interfaces that are
+        not only beautiful but also <b
+          >strategically enhance the user's journey</b
+        >. I translate brand identities and complex information into clean,
+        intuitive, and visually harmonious <b>digital experiences</b>.
+      </p>
+      <p>
+        I <b>obsess over the details</b>: typography, color palettes, spacing,
+        and iconography to ensure every element serves a purpose and contributes
+        to a <b>cohesive, engaging visual language</b>. My designs are built to
+        be visually compelling, emotionally resonant, and ultimately, effective
+        in <b> guiding users and achieving project goals</b>. I thrive on
+        bringing a distinct visual voice to every product, ensuring it stands
+        out while seamlessly integrating with the overall user experience.
+      </p>
+    </div>
+    <div class="design--header-cat-wrapper">
+      <div class="design--header-cat-bubble">
+        <p>Welcome to the <br /> design page.</p>
+      </div>
+      <img src="cat.png" alt="cat with text" width="192" />
+      <div class="design--header-cat-line"></div>
+    </div>
+  </section>
 
   <!-- work carousel -->
   <section class="work--carousel">
-    <div class="brandboard">
-      <img src="." alt="brandboard" width="" />
-      <h2>Branding</h2>
-      <p>
-        I created a branding for the MixBox brand, branding is much more than
-        just making a logo, curious what I created?
-      </p>
-      <button>View more</button>
+    <!-- Card 1: Brandboard -->
+    <div class="card brandboard">
+      <div class="card--image-container">
+        <img src="./brandboard-background.png" alt="brandboard" />
+      </div>
+      <div class="card--content">
+        <h2>Branding</h2>
+        <p>
+          I created a branding for the MixBox brand, branding is much more than
+          just making a logo, curious what I created?
+        </p>
+        <button class="card--button">View more</button>
+      </div>
     </div>
 
-    <div class="Moodboard">
-      <img src="." alt="Moodboard" width="" />
-      <h2>Moodboard</h2>
-      <p>
-        I created a mood board for a new skincare brand. The purpose was to set
-        the vibe I wanted to create for this brand. curious what I created?
-      </p>
-      <button>View more</button>
+    <!-- Card 2: Moodboard -->
+    <div class="card Moodboard">
+      <div class="card--image-container">
+        <img src="./moodboard-background.png" alt="Moodboard" />
+      </div>
+      <div class="card--content">
+        <h2>Moodboard</h2>
+        <p>
+          I created a mood board for a new skincare brand. The purpose was to
+          set the vibe I wanted to create for this brand. curious what I
+          created?
+        </p>
+        <button class="card--button">View more</button>
+      </div>
     </div>
 
-    <div class="Styleboard">
-      <img src="." alt="Styleboard" width="" />
-      <h2>Styleboard</h2>
-      <p>
-        It is the visual translation of that relaxed and luxurious vibe, and
-        lays the aesthetic foundation for the entire brand identity.
-      </p>
-      <button>View more</button>
+    <!-- Card 3: Styleboard -->
+    <div class="card Styleboard">
+      <div class="card--image-container">
+        <img src="./styleboard-background.png" alt="Styleboard" />
+      </div>
+      <div class="card--content">
+        <h2>Styleboard</h2>
+        <p>
+          It is the visual translation of that relaxed and luxurious vibe, and
+          lays the aesthetic foundation for the entire brand identity.
+        </p>
+        <button class="card--button">View more</button>
+      </div>
     </div>
   </section>
 

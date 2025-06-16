@@ -34,7 +34,7 @@ html {
 body {
     overflow-x: hidden;
     margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: var(--font-bodycopy);
     color: var(--c-dark-green);
     background-color: var(--c-beige);
 }
