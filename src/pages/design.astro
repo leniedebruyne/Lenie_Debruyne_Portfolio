@@ -1,0 +1,207 @@
+---
+// design.astro
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/styles.css";
+---
+
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Lenie Debruyne</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+</html>
+
+<body>
+  <!-- Footer -->
+  <Navigation />
+
+  <!-- header -->
+  <header>
+    <h1>Visual Designer Portfolio</h1>
+    <p>I like design and experiences that feel intuitive & look amazing.</p>
+    <p>
+      As a visual designer, I believe that aesthetics are intrinsically linked
+      to usability and impact. My aim is to craft interfaces that are not only
+      beautiful but also strategically enhance the user's journey. I translate
+      brand identities and complex information into clean, intuitive, and
+      visually harmonious digital experiences.
+    </p>
+    <p>
+      I obsess over the details: typography, color palettes, spacing, and
+      iconography to ensure every element serves a purpose and contributes to a
+      cohesive, engaging visual language. My designs are built to be visually
+      compelling, emotionally resonant, and ultimately, effective in guiding
+      users and achieving project goals. I thrive on bringing a distinct visual
+      voice to every product, ensuring it stands out while seamlessly
+      integrating with the overall user experience.
+    </p>
+    <p>Welcome to the design page.</p>
+    <img src="cat.png" alt="cat with text" width="192" />
+  </header>
+
+  <!-- work carousel -->
+  <section class="work--carousel">
+    <div class="brandboard">
+      <img src="." alt="brandboard" width="" />
+      <h2>Branding</h2>
+      <p>
+        I created a branding for the MixBox brand, branding is much more than
+        just making a logo, curious what I created?
+      </p>
+      <button>View more</button>
+    </div>
+
+    <div class="Moodboard">
+      <img src="." alt="Moodboard" width="" />
+      <h2>Moodboard</h2>
+      <p>
+        I created a mood board for a new skincare brand. The purpose was to set
+        the vibe I wanted to create for this brand. curious what I created?
+      </p>
+      <button>View more</button>
+    </div>
+
+    <div class="Styleboard">
+      <img src="." alt="Styleboard" width="" />
+      <h2>Styleboard</h2>
+      <p>
+        It is the visual translation of that relaxed and luxurious vibe, and
+        lays the aesthetic foundation for the entire brand identity.
+      </p>
+      <button>View more</button>
+    </div>
+  </section>
+
+  <!-- branding -->
+  <div class="design--navigation">
+    <button>Branding</button>
+    <button>Design</button>
+    <button>Animation</button>
+  </div>
+
+  <section class="moodboard-section">
+    <div class="moodboard-content">
+      <div class="moodboard-texts">
+        <h3>Mix <br /> Box</h3>
+        <p class="hashtag">#Branding</p>
+        <div class="moodboard-description">
+          <p>
+            MixBox is a new subscription service that delivers various cocktail
+            boxes monthly or bi-monthly.
+          </p>
+          <p>
+            The launch is scheduled for summer 2025 in Antwerp, with plans for
+            further expansion.
+          </p>
+        </div>
+      </div>
+      <div class="moodboard-image">
+        <img src="./brandboard.png" alt="Brandboard" width="805" />
+      </div>
+    </div>
+  </section>
+
+  <div class="design--navigation">
+    <button>Branding</button>
+    <button>Design</button>
+    <button>Animation</button>
+  </div>
+
+  <section class="moodboard-section">
+    <div class="moodboard-content">
+      <div class="moodboard-texts">
+        <h3>Mood <br /> board</h3>
+        <p class="hashtag">#SettingTheVibe</p>
+        <div class="moodboard-description">
+          <p>I created a mood board for a new skincare brand.</p>
+          <p>
+            It was designed to set the perfect mood where the viewer feels
+            relaxed and luxurious.
+          </p>
+        </div>
+      </div>
+      <div class="moodboard-image">
+        <img src="./moodboard.png" alt="Moodboard" width="804" height="557" />
+      </div>
+    </div>
+  </section>
+
+  <section class="moodboard-section">
+    <div class="moodboard-content">
+      <div class="moodboard-texts">
+        <h3>Style <br /> board</h3>
+        <p class="hashtag">#DesignDirection</p>
+        <div class="moodboard-description">
+          <p>
+            After capturing the mood with the mood board, I developed this style
+            board for the skincare brand.
+          </p>
+          <p>
+            It is the visual translation of that relaxed and luxurious vibe, and
+            lays the aesthetic foundation for the entire brand identity.
+          </p>
+        </div>
+      </div>
+      <div class="moodboard-image">
+        <img src="./syleboard.png" alt="Styleboard" width="804" />
+      </div>
+    </div>
+  </section>
+
+  <section class="moodboard-section">
+    <div class="moodboard-content">
+      <div class="moodboard-texts">
+        <h3>Social <br /> media</h3>
+        <p class="hashtag">#CreativeWork</p>
+        <div class="moodboard-description">
+          <p>
+            Here I present a selection of social media post designs for various
+            brands and occasions.
+          </p>
+          <p>
+            My goal is to visually translate each project's specific message and
+            branding into posts that not only stand out, but also make a direct
+            connection with followers.
+          </p>
+        </div>
+      </div>
+      <div class="moodboard-image">
+        <img src="./posts.png" alt="Posts" width="804" />
+      </div>
+    </div>
+  </section>
+
+  <div class="design--navigation">
+    <button>Branding</button>
+    <button>Design</button>
+    <button>Animation</button>
+  </div>
+
+  <section class="animation">
+    <img src="./Animation.png" alt="animation" width="945" />
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+</body>
