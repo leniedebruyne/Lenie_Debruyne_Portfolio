@@ -3,6 +3,8 @@
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/styles.css";
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -11,8 +13,9 @@ import "../styles/styles.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Lenie Debruyne</title>
-    <link rel="icon" type="image/x-icon" href="./favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href={`${base}images/favicon.svg`} />
+    <link rel="
+      stylesheet" href="styles.css" />
 
     <!-- Cormorant Garamond -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,7 +46,7 @@ import "../styles/styles.css";
         </a>
       </div>
       <h1>
-        <img src="./images/Header-P.svg" alt="P" class="p-tail" />
+        <img src={`${base}images/Header-P.svg`} alt="P" class="p-tail" />
         ortfo<span class="highlight-l">l</span>io
       </h1>
       <h2>Lenie Debruyne</h2>
@@ -74,7 +77,11 @@ import "../styles/styles.css";
     </div>
 
     <section class="about">
-      <img src="./images/photo_Lenie.png" alt="Foto van Lenie" width="308.6px" />
+      <img
+        src={`${base}images/photo_Lenie.png`}
+        alt="Foto van Lenie"
+        width="308.6px"
+      />
       <div class="about-text">
         <h3>Hi! I’m Lenie,</h3>
         <p>
@@ -110,7 +117,8 @@ import "../styles/styles.css";
         <h2 class="about-title">My Skills</h2>
         <div class="skills-grid">
           <div class="skill">
-            <img src="./images/Illustrator.png" alt="Illustrator" />
+            <img src={`${base}images/Illustrator.png`} alt="Illustrator" />
+
             <div>
               <p>Illustrator</p>
               <div class="dots">
@@ -121,7 +129,7 @@ import "../styles/styles.css";
           </div>
 
           <div class="skill">
-            <img src="./images/blender.png" alt="Blender" />
+            <img src={`${base}images/blender.png`} alt="Blender" />
             <div>
               <p>Blender</p>
               <div class="dots">
@@ -132,7 +140,7 @@ import "../styles/styles.css";
           </div>
 
           <div class="skill">
-            <img src="./images/Photoshop.png" alt="Photoshop" />
+            <img src={`${base}images/Photoshop.png`} alt="Photoshop" />
             <div>
               <p>Photoshop</p>
               <div class="dots">
@@ -143,7 +151,7 @@ import "../styles/styles.css";
           </div>
 
           <div class="skill">
-            <img src="./images/AfterEffects.png" alt="After Effects" />
+            <img src={`${base}images/AfterEffects.png`} alt="After Effects" />
             <div>
               <p>After Effects</p>
               <div class="dots">
@@ -154,7 +162,7 @@ import "../styles/styles.css";
           </div>
 
           <div class="skill">
-            <img src="./images/Figma.png" alt="Figma" />
+            <img src={`${base}images/Figma.png`} alt="Figma" />
             <div>
               <p>Figma</p>
               <div class="dots">
@@ -165,7 +173,7 @@ import "../styles/styles.css";
           </div>
 
           <div class="skill">
-            <img src="./images/Fresco.png" alt="Fresco" />
+            <img src={`${base}images/Fresco.png`} alt="Fresco" />
             <div>
               <p>Fresco</p>
               <div class="dots">
@@ -176,7 +184,7 @@ import "../styles/styles.css";
           </div>
 
           <div class="skill">
-            <img src="./images/Figma.png" alt="Figjam" />
+            <img src={`${base}images/Figma.png`} alt="Figjam" />
             <div>
               <p>Figjam</p>
               <div class="dots">
@@ -187,7 +195,7 @@ import "../styles/styles.css";
           </div>
 
           <div class="skill">
-            <img src="./images/Miro.png" alt="Miro" />
+            <img src={`${base}images/Miro.png`} alt="Miro" />
             <div>
               <p>Miro</p>
               <div class="dots">
@@ -266,7 +274,12 @@ import "../styles/styles.css";
           </div>
         </div>
         <div class="moodboard-image">
-          <img src="./images/moodboard.png" alt="Moodboard" width="804" height="557" />
+          <img
+            src={`${base}images/moodboard.png`}
+            alt="Moodboard"
+            width="804"
+            height="557"
+          />
         </div>
       </div>
     </section>

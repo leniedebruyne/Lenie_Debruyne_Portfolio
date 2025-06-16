@@ -3,6 +3,8 @@
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/design.css";
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -11,7 +13,7 @@ import "../styles/design.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Lenie Debruyne</title>
-    <link rel="icon" type="image/x-icon" href="./favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${base}images/favicon.svg`} />
     <link rel="stylesheet" href="styles.css" />
 
     <!-- Cormorant Garamond -->
@@ -71,7 +73,7 @@ import "../styles/design.css";
       <div class="design--header-cat-bubble">
         <p>Welcome to the <br /> design page.</p>
       </div>
-      <img src="/images/cat.png" alt="cat with text" width="192" />
+      <img src={`${base}images/cat.png`} alt="cat with text" width="192" />
       <div class="design--header-cat-line"></div>
     </div>
   </section>
@@ -81,7 +83,7 @@ import "../styles/design.css";
     <!-- Card 1: Brandboard -->
     <div class="card brandboard">
       <div class="card--image-container">
-        <img src="/images/brandboard-background.png" alt="brandboard" />
+        <img src={`${base}images/brandboard-background.png`} alt="brandboard" />
       </div>
       <div class="card--content">
         <h2>Branding</h2>
@@ -96,7 +98,7 @@ import "../styles/design.css";
     <!-- Card 2: Moodboard -->
     <div class="card Moodboard">
       <div class="card--image-container">
-        <img src="/images/moodboard-background.png" alt="Moodboard" />
+        <img src={`${base}images/moodboard-background.png`} alt="Moodboard" />
       </div>
       <div class="card--content">
         <h2>Moodboard</h2>
@@ -112,7 +114,7 @@ import "../styles/design.css";
     <!-- Card 3: Styleboard -->
     <div class="card Styleboard">
       <div class="card--image-container">
-        <img src="/images/styleboard-background.png" alt="Styleboard" />
+        <img src={`${base}images/styleboard-background.png`} alt="Styleboard" />
       </div>
       <div class="card--content">
         <h2>Styleboard</h2>
@@ -149,7 +151,11 @@ import "../styles/design.css";
         </div>
       </div>
       <div class="moodboard-image">
-        <img src="/images/brandboard.png" alt="Brandboard" width="805" />
+        <img
+          src={`${base}images/brandboard.png`}
+          alt="Brandboard"
+          width="805"
+        />
       </div>
     </div>
   </section>
@@ -175,7 +181,7 @@ import "../styles/design.css";
       </div>
       <div class="moodboard-image">
         <img
-          src="/Lenie_Debruyne_Portfolio/images/moodboard.png"
+          src={`${base}images/moodboard.png`}
           alt="Moodboard"
           width="804"
           height="557"
@@ -201,7 +207,7 @@ import "../styles/design.css";
         </div>
       </div>
       <div class="moodboard-image">
-        <img src="/images/syleboard.png" alt="Styleboard" width="804" />
+        <img src={`${base}images/syleboard.png`} alt="Styleboard" width="804" />
       </div>
     </div>
   </section>
@@ -224,7 +230,7 @@ import "../styles/design.css";
         </div>
       </div>
       <div class="moodboard-image">
-        <img src="/images/posts.png" alt="Posts" width="804" />
+        <img src={`${base}images/posts.png`} alt="Posts" width="804" />
       </div>
     </div>
   </section>
@@ -236,7 +242,7 @@ import "../styles/design.css";
   </div>
 
   <section class="animation">
-    <img src="/images/Animation.png" alt="animation" width="945" />
+    <img src={`${base}images/Animation.png`} alt="animation" width="945" />
   </section>
 
   <!-- Footer -->
