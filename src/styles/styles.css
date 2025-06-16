@@ -189,7 +189,7 @@ p{
     border-right: 10px solid transparent; }
 
 
-.strip {
+.strip--introduce {
     background-color: var(--c-dark-green);
     color: var(--c-beige);
     overflow: hidden;
@@ -200,12 +200,29 @@ p{
     margin-top: -14rem;  
 }
 
-.strip-inner {
+.strip-inner--introduce {
     display: flex;
     width: calc(16 * 200px);
     animation: scroll 20s linear infinite;     }
-        
 
+
+
+.strip--work{
+    background-color: var(--c-pink);
+    color: var(--c-dark-green);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.strip-inner--work{
+    display: flex;
+    width: calc(16 * 200px);
+    animation: scroll 20s linear infinite;
+}
+        
 
 .repeat {
     flex: 0 0 200px;
@@ -577,7 +594,7 @@ footer {
     font-size: 25px; }
 
 .footer-banner {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: -30px;
     color: var(--c-beige);
     font-weight: 600;
