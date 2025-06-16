@@ -405,6 +405,17 @@ margin-left: -42rem;
     background-color: var(--c-beige);
     text-align: center;
     padding: 2rem;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.welcome--message{
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
 }
 
 
