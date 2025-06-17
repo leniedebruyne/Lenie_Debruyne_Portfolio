@@ -268,12 +268,14 @@ const base = import.meta.env.BASE_URL;
   </div>
 
   <section id="animation" class="animation">
-    <img
-      src={`${base}images/Animation.png`}
-      alt="animation"
+    <video
+      src={`${base}videos/animation.mp4`}
       width="945"
       class="animation--video"
-    />
+      autoplay
+      muted
+      loop
+      playsinline></video>
   </section>
 
   <div class="strip--work">

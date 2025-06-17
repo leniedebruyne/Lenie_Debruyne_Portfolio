@@ -8,13 +8,15 @@ const base = import.meta.env.BASE_URL;
   </a>
   <nav>
     <ul>
-      <a href="design" class="badge-link">
+      <a href={`${base}design`} class="badge-link">
         <li>Visual designer</li>
       </a>
-      <a href="ux" class="badge-link">
+      <a href={`${base}ux`} class="badge-link">
         <li>Experience designer</li>
       </a>
-      <li>Motion design</li>
+      <a href={`${base}design#animation`} class="badge-link">
+        <li>Motion designer</li>
+      </a>
     </ul>
   </nav>
 </header>
