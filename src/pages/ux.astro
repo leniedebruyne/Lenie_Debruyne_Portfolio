@@ -1,0 +1,139 @@
+---
+// design.astro
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/ux.css";
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Lenie Debruyne</title>
+    <link rel="icon" type="image/svg+xml" href={`${base}images/favicon.svg`} />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+</html>
+
+<body>
+  <!-- Navigation -->
+  <Navigation />
+
+  <!-- header -->
+  <section class="design--header">
+    <h1 class="design--header-title">
+      <div class="design--header-title-words">
+        <span class="visual-word">Ux/Ui</span>
+        <span class="designer-word">DESIGNER</span>
+      </div>
+
+      <span class="portfolio-word">PORTFO<span class="green-l">L</span>IO</span>
+    </h1>
+    <div class="design--header-text">
+      <p>
+        <em>I make user friendly designs that users love and remember.</em>
+      </p>
+      <p>
+        I am a <b>UX/UI designer</b> driven by a passion for creating <b
+          >meaningful and intuitive digital experiences</b
+        >. I’ve learned to transform creative ideas into <b
+          >functional, user-centered products</b
+        > that not only work well, but also look <b>visually refined</b>.
+      </p>
+
+      <p>
+        What motivates me most is <b>interaction with people</b>. Every
+        conversation, every bit of feedback offers a <b>new perspective</b>,
+        helping me <b>improve designs</b> so they truly meet the needs of real users.
+        For me, user experience isn’t just part of the process, <b
+          >it is the process</b
+        >.
+      </p>
+
+      <p>
+        I love <b>challenging myself</b> to grow, learning from projects, refining
+        my approach, and continuously evolving both <b
+          >as a designer and as a person</b
+        >.
+      </p>
+    </div>
+    <div class="design--header-cat-wrapper">
+      <div class="design--header-cat-bubble">
+        <p>Welcome to the <br /> Ux / Ui page.</p>
+      </div>
+      <img src={`${base}images/cat.png`} alt="cat with text" width="192" />
+      <div class="design--header-cat-line"></div>
+    </div>
+  </section>
+
+  <!-- work carousel -->
+  <section class="work--carousel">
+    <!-- Card 1: Agency Monkeyshot -->
+    <div class="card brandboard">
+      <div class="card--image-container">
+        <img src={`${base}images/Monkeyshot.png`} alt="Monkeyshot" />
+      </div>
+      <div class="card--content">
+        <h2>Agency Monkeyshot</h2>
+        <p>
+          I redesigned the digital experience for newcomers in Antwerp, based on
+          user research with Atlas. Curious how I turned insights into a
+          human-centered solution?
+        </p>
+        <button class="card--button">View more</button>
+      </div>
+    </div>
+
+    <!-- Card 2:Intesellar Starship -->
+    <div class="card Moodboard">
+      <div class="card--image-container">
+        <img src={`${base}images/Starship.png`} alt="Starship" />
+      </div>
+      <div class="card--content">
+        <h2>Intesellar Starship</h2>
+        <p>
+          I designed a future-focused concept for life aboard a generation
+          starship, blending digital and physical elements to support
+          well-being. Curious how it turned out?
+        </p>
+        <button class="card--button">View more</button>
+      </div>
+    </div>
+
+    <!-- Card 3: / -->
+    <div class="card Styleboard">
+      <div class="card--image-container">
+        <img src={`${base}images/Comming-soon.png`} alt="Styleboard" />
+      </div>
+      <div class="card--content">
+        <h2>comming soon</h2>
+        <p>
+          This is a project I will be working on in the future. It will showcase my passion projects and personal design explorations, where I can push the boundaries of creativity and innovation.
+        </p>
+        <button class="card--button">View more</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+</body>
