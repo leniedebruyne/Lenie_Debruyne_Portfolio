@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -37,6 +38,10 @@ body {
     font-family: var(--font-bodycopy);
     color: var(--c-dark-green);
     background-color: var(--c-beige);
+}
+
+a {
+    text-decoration: none;
 }
 
 footer {
@@ -326,4 +331,249 @@ footer {
 .card--button:hover {
     background-color: var(--c-light-green);
     transform: translateY(-2px);
+}
+
+.strip--introduce {
+    background-color: var(--c-dark-green);
+    color: var(--c-beige);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding: 0.5rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.strip-inner--introduce {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.strip--work {
+    background-color: var(--c-pink);
+    color: var(--c-dark-green);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.strip-inner--work {
+    display: flex;
+    width: calc(16 * 200px);
+    animation: scroll 20s linear infinite;
+}
+
+.repeat {
+    flex: 0 0 200px;
+    margin-right: 50px;
+    white-space: nowrap;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.design--navigation {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 10rem;
+}
+
+.design--navigation a {
+    color: var(--c-dark-green);
+    border: 2px solid var(--c-dark-green);
+    border-radius: 10px;
+    padding: 10px 40px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+
+.design--navigation a:hover {
+    background-color: var(--c-light-green);
+    color: var(--c-pink);
+}
+
+.design--navigation a.active {
+    background-color: var(--c-dark-green);
+    color: var(--c-beige);
+    pointer-events: none;
+}
+
+
+
+
+.coming-soon {
+    background-color: var(--c-dark-green);
+    text-align: center;
+    padding: 5rem 2rem;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.coming-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.coming-soon::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--c-dark-green);
+    top: -15px;
+    left: 0;
+}
+
+.coming-soon::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: var(--c-dark-green);
+    top: -34px;
+    left: 0;
+}
+
+
+
+.coming-soon--banner {
+    margin-top: 5rem;
+    font-size: 150px;
+    font-weight: bold;
+    color: var(--c-pink);
+    line-height: 1;
+    text-transform: uppercase;
+    transform: scaleY(1.5);
+    display: inline-block;
+
+    margin-bottom: 0;
+}
+
+
+.comming-soon-title {
+    font-family: var(--font-title);
+    font-size: 75px;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+.somming-soon--title-center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.project-box {
+    background-color: var(--c-light-green);
+    color: var(--c-beige);
+    padding: 2rem;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 0 1rem white;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    top: -300px;
+    margin-bottom: -200px;
+}
+
+
+.project-box h4 {
+    font-size: 75px;
+    margin: 0;
+}
+
+.project-box p {
+    font-size: 150px;
+    font-weight: 600;
+    margin: 1rem 0 0;
+}
+
+
+.project-box::before,
+.project-box::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.dubble-diamond{
+    display: flex;
+    justify-content: center;
+}
+
+.dubble-diamond--text{
+    max-width: 750px;
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+}
+
+
+.moodboard-section {
+    display: flex;
+    justify-content: center;
+    padding: 10rem 2rem;
+}
+
+.moodboard-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    gap: 50px;
+}
+
+.moodboard-texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.moodboard-texts h3 {
+    font-family: var(--font-title);
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 75px;
+    margin: 0;
+}
+
+.moodboard-texts .hashtag {
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    color: var(--c-light-green);
+}
+
+.moodboard-description p {
+    margin: 0 0 10px 0;
+    max-width: 300px;
+}
+
+.moodboard-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -37,6 +38,10 @@ body {
     font-family: var(--font-bodycopy);
     color: var(--c-dark-green);
     background-color: var(--c-beige);
+}
+
+a {
+    text-decoration: none;
 }
 
 footer {
@@ -338,7 +343,7 @@ footer {
      padding-top: 10rem;
  }
 
- .design--navigation button {
+ .design--navigation a {
      color: var(--c-dark-green);
      border: 2px solid var(--c-dark-green);
      border-radius: 10px;
@@ -349,12 +354,12 @@ footer {
      transition: all 0.3s ease;
  }
 
- .design--navigation button:hover {
+ .design--navigation a:hover {
      background-color: var(--c-light-green);
      color: var(--c-pink);
 }
 
-.design--navigation button.active {
+.design--navigation a.active {
     background-color: var(--c-dark-green);
     color: var(--c-beige);
     pointer-events: none;
@@ -416,6 +421,22 @@ footer {
     padding-top: 3rem;
     padding-bottom: 12rem;
 }
+
+.strip--introduce {
+    background-color: var(--c-dark-green);
+    color: var(--c-beige);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding: 0.5rem 0;
+    position: relative;
+    z-index: 1;
+ }
+
+.strip-inner--introduce {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;     }
 
 .strip--work {
     background-color: var(--c-pink);
