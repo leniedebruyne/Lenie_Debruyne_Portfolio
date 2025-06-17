@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -42,6 +43,7 @@ body {
 .badge-link {
     all: unset;
 }
+
 
 
 
@@ -130,6 +132,7 @@ p{
 }
 
 .badge.motion {
+    text-decoration: none;
     position: absolute;
     top: 0;
     background-color: var(--c-light-green);
