@@ -41,9 +41,12 @@ const base = import.meta.env.BASE_URL;
   <!-- header -->
   <section class="design--header">
     <h1 class="design--header-title">
-      <span>Visual</span>
-      <span class="designer-word">Designer</span>
-      <span>PORTFO<span class="green-l">L</span>IO</span>
+      <div class="design--header-title-words">
+        <span class="visual-word">Visual</span>
+        <span class="designer-word">DESIGNER</span>
+      </div>
+
+      <span class="portfolio-word">PORTFO<span class="green-l">L</span>IO</span>
     </h1>
     <div class="design--header-text">
       <p>
@@ -129,7 +132,7 @@ const base = import.meta.env.BASE_URL;
 
   <!-- branding -->
   <div class="design--navigation">
-    <button>Branding</button>
+    <button class="active">Branding</button>
     <button>Design</button>
     <button>Animation</button>
   </div>
@@ -160,9 +163,9 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
-  <div class="design--navigation">
+  <div class="design--navigation active">
     <button>Branding</button>
-    <button>Design</button>
+    <button class="active"> Design</button>
     <button>Animation</button>
   </div>
 
@@ -235,15 +238,43 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
-  <div class="design--navigation">
+  <div class="design--navigation active">
     <button>Branding</button>
     <button>Design</button>
-    <button>Animation</button>
+    <button class="active">Animation</button>
   </div>
 
   <section class="animation">
-    <img src={`${base}images/Animation.png`} alt="animation" width="945" />
+    <img
+      src={`${base}images/Animation.png`}
+      alt="animation"
+      width="945"
+      class="animation--video"
+    />
   </section>
+
+  <div class="strip--work">
+    <div class="strip-inner--work">
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+
+      <!-- Herhaling -->
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+      <span class="repeat">Let's work together</span>
+    </div>
+  </div>
 
   <!-- Footer -->
   <Footer />
