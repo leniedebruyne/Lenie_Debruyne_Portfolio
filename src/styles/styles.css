@@ -214,12 +214,13 @@ p{
 .strip--introduce {
     background-color: var(--c-dark-green);
     color: var(--c-beige);
-    overflow: hidden;
     white-space: nowrap;
-    width: 100%;
     padding: 0.5rem 0;
-    position: relative;   
-    margin-top: -14rem;  
+    position: relative;
+    z-index: 1;
+    width: 200% !important;
+    margin-left: -30rem;
+    margin-top: -14rem;
 }
 
 .strip-inner--introduce {
@@ -232,11 +233,12 @@ p{
 .strip--work{
     background-color: var(--c-pink);
     color: var(--c-dark-green);
-    overflow: hidden;
     white-space: nowrap;
-    width: 100%;
     padding: 0.5rem 0;
     position: relative;
+    z-index: 1;
+    width: 200% !important;
+    margin-left: -30rem;
 }
 
 .strip-inner--work{
@@ -902,6 +904,12 @@ footer {
             height: auto;
         }
 
+        /* =====Banner ===== */
+        .strip--introduce, .strip--work{
+            margin-left: 0rem;
+        }
+
+
         /* ===== Footer ===== */
 
         footer {
@@ -976,7 +984,11 @@ footer {
             h2 {
                 transform: translate(0, 0);
                 text-align: center;
-                margin-top: 1rem;
+                margin-top: -22rem;
+            }
+
+            .p-tail{
+                margin-top: -1rem;
             }
 
             .badges {
@@ -998,7 +1010,7 @@ footer {
             }
 
             .strip--introduce {
-                margin-top: 0;
+                margin-top: 15rem;
             }
 
             .skills-education {
@@ -1038,8 +1050,10 @@ footer {
 
 /* ===== Monitor ===== */
 @media (min-width: 1201px) {
-    body {
+
+    .content--page {
         max-width: 1600px;
         margin: 0 auto;
     }
+
 }

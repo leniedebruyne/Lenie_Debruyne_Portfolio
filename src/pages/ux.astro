@@ -38,303 +38,308 @@ const base = import.meta.env.BASE_URL;
   <!-- Navigation -->
   <Navigation />
 
-  <!-- header -->
-  <section class="design--header">
-    <h1 class="design--header-title">
-      <div class="design--header-title-words">
-        <span class="visual-word">Ux/Ui</span>
-        <span class="designer-word">DESIGNER</span>
-      </div>
+  <div class="content--page">
+    <!-- header -->
+    <section class="design--header">
+      <h1 class="design--header-title">
+        <div class="design--header-title-words">
+          <span class="visual-word">Ux/Ui</span>
+          <span class="designer-word">DESIGNER</span>
+        </div>
 
-      <span class="portfolio-word">PORTFO<span class="green-l">L</span>IO</span>
-    </h1>
-    <div class="design--header-text">
-      <p>
-        <em>I make user friendly designs that users love and remember.</em>
-      </p>
-      <p>
-        I am a <b>UX/UI designer</b> driven by a passion for creating <b
-          >meaningful and intuitive digital experiences</b
-        >. I’ve learned to transform creative ideas into <b
-          >functional, user-centered products</b
-        > that not only work well, but also look <b>visually refined</b>.
-      </p>
-
-      <p>
-        What motivates me most is <b>interaction with people</b>. Every
-        conversation, every bit of feedback offers a <b>new perspective</b>,
-        helping me <b>improve designs</b> so they truly meet the needs of real users.
-        For me, user experience isn’t just part of the process, <b
-          >it is the process</b
-        >.
-      </p>
-
-      <p>
-        I love <b>challenging myself</b> to grow, learning from projects, refining
-        my approach, and continuously evolving both <b
-          >as a designer and as a person</b
-        >.
-      </p>
-    </div>
-    <div class="design--header-cat-wrapper">
-      <div class="design--header-cat-bubble">
-        <p>Welcome to the <br /> Ux / Ui page.</p>
-      </div>
-      <img src={`${base}images/cat.png`} alt="cat with text" width="192" />
-      <div class="design--header-cat-line"></div>
-    </div>
-  </section>
-
-  <!-- work carousel -->
-  <section class="work--carousel">
-    <!-- Card 1: Agency Monkeyshot -->
-    <div class="card brandboard">
-      <div class="card--image-container">
-        <img src={`${base}images/Monkeyshot.png`} alt="Monkeyshot" />
-      </div>
-      <div class="card--content">
-        <h2>Agency Monkeyshot</h2>
-        <p>
-          I redesigned the digital experience for newcomers in Antwerp, based on
-          user research with Atlas. Curious how I turned insights into a
-          human-centered solution?
-        </p>
-        <a href="#diamond" class="card--button">View more</a>
-      </div>
-    </div>
-
-    <!-- Card 2:Intesellar Starship -->
-    <div class="card Moodboard">
-      <div class="card--image-container">
-        <img src={`${base}images/Starship.png`} alt="Starship" />
-      </div>
-      <div class="card--content">
-        <h2>Intesellar Starship</h2>
-        <p>
-          I designed a future-focused concept for life aboard a generation
-          starship, blending digital and physical elements to support
-          well-being. Curious how it turned out?
-        </p>
-        <a href="#diamond" class="card--button">View more</a>
-      </div>
-    </div>
-
-    <!-- Card 3: / -->
-    <div class="card Styleboard">
-      <div class="card--image-container">
-        <img src={`${base}images/Comming-soon.png`} alt="Styleboard" />
-      </div>
-      <div class="card--content">
-        <h2>comming soon</h2>
-        <p>
-          This is a project I will be working on in the future. It will showcase
-          my passion projects and personal design explorations, where I can push
-          the boundaries of creativity and innovation.
-        </p>
-        <a href="#passion" class="card--button">View more</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="strip--introduce">
-    <div class="strip-inner--introduce">
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-
-      <!-- Herhaling -->
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-    </div>
-  </div>
-
-  <!-- Navigation -->
-  <div class="design--navigation" id="passion">
-    <a href="#passion" class="active">Passion</a>
-    <a href="#diamond">Dubble diamond</a>
-    <a href="#favourite">My favourite</a>
-  </div>
-
-  <!-- Coming Soon -->
-  <section class="coming-soon">
-    <div class="coming-box">
-      <h1 class="coming-soon--banner">COMING SOON <br /> COMING SOON</h1>
-      <div class="project-box">
-        <h4>Passion <br /> Project</h4>
-        <p>2025</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Navigation -->
-  <div class="design--navigation" id="diamond">
-    <a href="#passion">Passion</a>
-    <a href="#diamond" class="active">Dubble diamond</a>
-    <a href="#favourite">My favourite</a>
-  </div>
-
-  <section class="dubble-diamond">
-    <div class="dubble-diamond--text">
-      <p>
-        In our second year of the Experience Design course, we worked with the
-        <b>Double Diamond framework</b>.
-      </p>
-
-      <p>
-        Our first assignment was in collaboration with the agency Monkeyshot,
-        where we focused on researching how to help immigrants feel more at home
-        in Belgium, and explored <b
-          >how their social circles influence that experience</b
-        >. Fore this assignment we focused on the <b
-          >first half of the Double Diamond</b
-        >.
-      </p>
-
-      <p>
-        The second assignment was more focused on the <b
-          >second half of the Double Diamond</b
-        > (ideation and prototyping), though I <b
-          >occasionally reused methods from the discovery phase</b
-        >. As you can imagine, these projects involved a <b
-          >wide range of UX techniques</b
-        >. That's why this page offers a <b>concise summary of each project</b>.
-      </p>
-
-      <p>
-        Interested in the full journey? Click "View more" to visit the Behance
-        page, where the <b> complete process is documented</b> in detail.
-      </p>
-    </div>
-
-    <div class="dubble-diamond--projects"></div>
-  </section>
-
-  <section class="work--carousel">
-    <!-- Card 1: Agency Monkeyshot -->
-    <div class="card brandboard">
-      <div class="card--image-container">
-        <img src={`${base}images/Monkeyshot.png`} alt="Monkeyshot" />
-      </div>
-      <div class="card--content">
-        <h2>Agency Monkeyshot</h2>
-        <p>
-          In this project, I designed an improved digital experience for
-          newcomers to Antwerp, in collaboration with Atlas Antwerp. The
-          existing website did not meet their needs. My focus was on the first
-          part of the Double Diamond: I researched the experiences, concerns and
-          needs of newcomers through interviews, desk research and personas.
-          Based on this, I formulated a clear problem statement and design
-          opportunities, as the basis for a human-centered and accessible
-          digital solution.
-        </p>
-        <a
-          href="https://www.behance.net/gallery/214794167/Immigranten-onderzoeksopdracht"
-          class="card--button"
-          target="_blank"
-          rel="noopener noreferrer"
+        <span class="portfolio-word"
+          >PORTFO<span class="green-l">L</span>IO</span
         >
-          View more
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 2:Intesellar Starship -->
-    <div class="card Moodboard">
-      <div class="card--image-container">
-        <img src={`${base}images/Starship.png`} alt="Starship" />
-      </div>
-      <div class="card--content">
-        <h2>Intesellar Starship</h2>
+      </h1>
+      <div class="design--header-text">
         <p>
-          For this project, I designed a digital experience for a generation
-          starship, a spaceship where generations live together on their way to
-          an exoplanet. Within a multidisciplinary team, I worked on a
-          human-centered solution for an aspect of life on board, such as
-          education or mental health. I went through the second part of the
-          Double Diamond and developed a physical-digital prototype, tested and
-          refined with users. The result: a future-oriented concept that
-          supports well-being and survival during long space voyages.
+          <em>I make user friendly designs that users love and remember.</em>
         </p>
-        <a
-          href="https://www.behance.net/gallery/225607289/KLM-Watch"
-          class="card--button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View more
-        </a>
+        <p>
+          I am a <b>UX/UI designer</b> driven by a passion for creating <b
+            >meaningful and intuitive digital experiences</b
+          >. I’ve learned to transform creative ideas into <b
+            >functional, user-centered products</b
+          > that not only work well, but also look <b>visually refined</b>.
+        </p>
+
+        <p>
+          What motivates me most is <b>interaction with people</b>. Every
+          conversation, every bit of feedback offers a <b>new perspective</b>,
+          helping me <b>improve designs</b> so they truly meet the needs of real
+          users. For me, user experience isn’t just part of the process, <b
+            >it is the process</b
+          >.
+        </p>
+
+        <p>
+          I love <b>challenging myself</b> to grow, learning from projects, refining
+          my approach, and continuously evolving both <b
+            >as a designer and as a person</b
+          >.
+        </p>
       </div>
-    </div>
-  </section>
+      <div class="design--header-cat-wrapper">
+        <div class="design--header-cat-bubble">
+          <p>Welcome to the <br /> Ux / Ui page.</p>
+        </div>
+        <img src={`${base}images/cat.png`} alt="cat with text" width="192" />
+        <div class="design--header-cat-line"></div>
+      </div>
+    </section>
 
-  <!-- Navigation -->
-  <div class="design--navigation" id="favourite">
-    <a href="#passion">Passion</a>
-    <a href="#diamond">Dubble diamond</a>
-    <a href="#favourite" class="active">My favourite</a>
-  </div>
-
-  <section class="moodboard-section">
-    <div class="moodboard-content">
-      <div class="moodboard-texts">
-        <h3>Story <br /> telling</h3>
-        <p class="hashtag">#StoryDriven</p>
-        <div class="moodboard-description">
+    <!-- work carousel -->
+    <section class="work--carousel">
+      <!-- Card 1: Agency Monkeyshot -->
+      <div class="card brandboard">
+        <div class="card--image-container">
+          <img src={`${base}images/Monkeyshot.png`} alt="Monkeyshot" />
+        </div>
+        <div class="card--content">
+          <h2>Agency Monkeyshot</h2>
           <p>
-            For the Interstellar Starship assignment, I tackled the crucial
-            challenge of supporting the crew's mental well-being during long
-            voyages. My approach focused on the small, yet significant, moments
-            in daily life.
+            I redesigned the digital experience for newcomers in Antwerp, based
+            on user research with Atlas. Curious how I turned insights into a
+            human-centered solution?
           </p>
-          <p>
-            To effectively communicate and validate this concept, I developed a
-            storyboard. This visual storytelling method proved invaluable,
-            helping my test participants connect emotionally with the solution
-            and truly envision its impact on their lives.
-          </p>
+          <a href="#diamond" class="card--button">View more</a>
         </div>
       </div>
-      <div class="moodboard-image">
-        <img
-          src={`${base}images/Story-telling.png`}
-          alt="Brandboard"
-          width="805"
-        />
+
+      <!-- Card 2:Intesellar Starship -->
+      <div class="card Moodboard">
+        <div class="card--image-container">
+          <img src={`${base}images/Starship.png`} alt="Starship" />
+        </div>
+        <div class="card--content">
+          <h2>Intesellar Starship</h2>
+          <p>
+            I designed a future-focused concept for life aboard a generation
+            starship, blending digital and physical elements to support
+            well-being. Curious how it turned out?
+          </p>
+          <a href="#diamond" class="card--button">View more</a>
+        </div>
+      </div>
+
+      <!-- Card 3: / -->
+      <div class="card Styleboard">
+        <div class="card--image-container">
+          <img src={`${base}images/Comming-soon.png`} alt="Styleboard" />
+        </div>
+        <div class="card--content">
+          <h2>comming soon</h2>
+          <p>
+            This is a project I will be working on in the future. It will
+            showcase my passion projects and personal design explorations, where
+            I can push the boundaries of creativity and innovation.
+          </p>
+          <a href="#passion" class="card--button">View more</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip--introduce">
+      <div class="strip-inner--introduce">
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+
+        <!-- Herhaling -->
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
       </div>
     </div>
-  </section>
 
-  <div class="strip--work">
-    <div class="strip-inner--work">
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
+    <!-- Navigation -->
+    <div class="design--navigation" id="passion">
+      <a href="#passion" class="active">Passion</a>
+      <a href="#diamond">Dubble diamond</a>
+      <a href="#favourite">My favourite</a>
+    </div>
 
-      <!-- Herhaling -->
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
+    <!-- Coming Soon -->
+    <section class="coming-soon">
+      <div class="coming-box">
+        <h1 class="coming-soon--banner">COMING SOON <br /> COMING SOON</h1>
+        <div class="project-box">
+          <h4>Passion <br /> Project</h4>
+          <p>2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="design--navigation" id="diamond">
+      <a href="#passion">Passion</a>
+      <a href="#diamond" class="active">Dubble diamond</a>
+      <a href="#favourite">My favourite</a>
+    </div>
+
+    <section class="dubble-diamond">
+      <div class="dubble-diamond--text">
+        <p>
+          In our second year of the Experience Design course, we worked with the
+          <b>Double Diamond framework</b>.
+        </p>
+
+        <p>
+          Our first assignment was in collaboration with the agency Monkeyshot,
+          where we focused on researching how to help immigrants feel more at
+          home in Belgium, and explored <b
+            >how their social circles influence that experience</b
+          >. Fore this assignment we focused on the <b
+            >first half of the Double Diamond</b
+          >.
+        </p>
+
+        <p>
+          The second assignment was more focused on the <b
+            >second half of the Double Diamond</b
+          > (ideation and prototyping), though I <b
+            >occasionally reused methods from the discovery phase</b
+          >. As you can imagine, these projects involved a <b
+            >wide range of UX techniques</b
+          >. That's why this page offers a <b>concise summary of each project</b
+          >.
+        </p>
+
+        <p>
+          Interested in the full journey? Click "View more" to visit the Behance
+          page, where the <b> complete process is documented</b> in detail.
+        </p>
+      </div>
+
+      <div class="dubble-diamond--projects"></div>
+    </section>
+
+    <section class="work--carousel">
+      <!-- Card 1: Agency Monkeyshot -->
+      <div class="card brandboard">
+        <div class="card--image-container">
+          <img src={`${base}images/Monkeyshot.png`} alt="Monkeyshot" />
+        </div>
+        <div class="card--content">
+          <h2>Agency Monkeyshot</h2>
+          <p>
+            In this project, I designed an improved digital experience for
+            newcomers to Antwerp, in collaboration with Atlas Antwerp. The
+            existing website did not meet their needs. My focus was on the first
+            part of the Double Diamond: I researched the experiences, concerns
+            and needs of newcomers through interviews, desk research and
+            personas. Based on this, I formulated a clear problem statement and
+            design opportunities, as the basis for a human-centered and
+            accessible digital solution.
+          </p>
+          <a
+            href="https://www.behance.net/gallery/214794167/Immigranten-onderzoeksopdracht"
+            class="card--button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View more
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2:Intesellar Starship -->
+      <div class="card Moodboard">
+        <div class="card--image-container">
+          <img src={`${base}images/Starship.png`} alt="Starship" />
+        </div>
+        <div class="card--content">
+          <h2>Intesellar Starship</h2>
+          <p>
+            For this project, I designed a digital experience for a generation
+            starship, a spaceship where generations live together on their way
+            to an exoplanet. Within a multidisciplinary team, I worked on a
+            human-centered solution for an aspect of life on board, such as
+            education or mental health. I went through the second part of the
+            Double Diamond and developed a physical-digital prototype, tested
+            and refined with users. The result: a future-oriented concept that
+            supports well-being and survival during long space voyages.
+          </p>
+          <a
+            href="https://www.behance.net/gallery/225607289/KLM-Watch"
+            class="card--button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View more
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="design--navigation" id="favourite">
+      <a href="#passion">Passion</a>
+      <a href="#diamond">Dubble diamond</a>
+      <a href="#favourite" class="active">My favourite</a>
+    </div>
+
+    <section class="moodboard-section">
+      <div class="moodboard-content">
+        <div class="moodboard-texts">
+          <h3>Story <br /> telling</h3>
+          <p class="hashtag">#StoryDriven</p>
+          <div class="moodboard-description">
+            <p>
+              For the Interstellar Starship assignment, I tackled the crucial
+              challenge of supporting the crew's mental well-being during long
+              voyages. My approach focused on the small, yet significant,
+              moments in daily life.
+            </p>
+            <p>
+              To effectively communicate and validate this concept, I developed
+              a storyboard. This visual storytelling method proved invaluable,
+              helping my test participants connect emotionally with the solution
+              and truly envision its impact on their lives.
+            </p>
+          </div>
+        </div>
+        <div class="moodboard-image">
+          <img
+            src={`${base}images/Story-telling.png`}
+            alt="Brandboard"
+            width="805"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="strip--work">
+      <div class="strip-inner--work">
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+
+        <!-- Herhaling -->
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+      </div>
     </div>
   </div>
 

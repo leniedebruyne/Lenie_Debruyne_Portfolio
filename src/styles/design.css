@@ -1,7 +1,6 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    margin: 0 auto;
 }
 
 *,
@@ -40,6 +39,14 @@ body {
     color: var(--c-dark-green);
     background-color: var(--c-beige);
 }
+
+/* html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+} */
 
 a {
     text-decoration: none;
@@ -431,25 +438,28 @@ footer {
     color: var(--c-beige);
     overflow: hidden;
     white-space: nowrap;
-    width: 100%;
     padding: 0.5rem 0;
     position: relative;
     z-index: 1;
- }
+    width: 200% !important;
+    margin-left: -30rem;
+  }
 
 .strip-inner--introduce {
     display: flex;
     width: max-content;
-    animation: scroll 20s linear infinite;     }
+    animation: scroll 20s linear infinite;   }
 
 .strip--work {
     background-color: var(--c-pink);
     color: var(--c-dark-green);
     overflow: hidden;
     white-space: nowrap;
-    width: 100%;
     padding: 0.5rem 0;
     position: relative;
+    z-index: 1;
+    width: 200% !important;
+    margin-left: -30rem;
 }
 
 .strip-inner--work {
@@ -463,6 +473,7 @@ footer {
     flex: 0 0 200px;
     margin-right: 50px;
     white-space: nowrap;
+    font-size: 16px;
 }
 
 
@@ -718,6 +729,12 @@ footer {
         max-width: 100%;   
     }
 
+    /* =====Banner ===== */
+    .strip--introduce,
+    .strip--work {
+        margin-left: 0rem;
+    }
+
 }
 
 /* ===== TABLET ===== */
@@ -820,8 +837,12 @@ footer {
 
 /* ===== Monitor ===== */
 @media (min-width: 1201px) {
-    body {
+
+    .content--page{
         max-width: 1600px;
-        margin: 0 auto;
+         margin: 0 auto;
     }
+
+
+   
 }

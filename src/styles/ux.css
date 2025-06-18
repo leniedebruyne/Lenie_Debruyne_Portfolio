@@ -337,12 +337,12 @@ footer {
 .strip--introduce {
     background-color: var(--c-dark-green);
     color: var(--c-beige);
-    overflow: hidden;
     white-space: nowrap;
-    width: 100%;
     padding: 0.5rem 0;
     position: relative;
     z-index: 1;
+    width: 200% !important;
+    margin-left: -30rem;
 }
 
 .strip-inner--introduce {
@@ -354,11 +354,12 @@ footer {
 .strip--work {
     background-color: var(--c-pink);
     color: var(--c-dark-green);
-    overflow: hidden;
     white-space: nowrap;
-    width: 100%;
     padding: 0.5rem 0;
     position: relative;
+    z-index: 1;
+    width: 200% !important;
+    margin-left: -30rem;
 }
 
 .strip-inner--work {
@@ -849,6 +850,11 @@ footer {
     .dubble-diamond--text{
         max-width: 80%;
     }
+
+    /* =====Banner ===== */
+    .strip--introduce,
+    .strip--work {
+    margin-left: 0rem;   }
     
 }
 
@@ -951,19 +957,24 @@ footer {
     font-size: 25px;
  }
 
-    /* ===== Moodboard ===== */
+ .moodboard-image {
+     width: 90%;
+     max-width: 400px;
+ }
 
-    .moodboard-image {
-        width: 70%;
-        max-width: 350px;
-    }
+ .moodboard-image img {
+     width: 100%;
+     height: auto;
+ }
 
 }
 
 /* ===== Monitor ===== */
 @media (min-width: 1201px) {
-    body {
+
+    .content--page {
         max-width: 1600px;
         margin: 0 auto;
-    } 
+    }
+
 }

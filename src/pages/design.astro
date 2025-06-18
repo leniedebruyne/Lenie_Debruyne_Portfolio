@@ -38,268 +38,283 @@ const base = import.meta.env.BASE_URL;
   <!-- Navigation -->
   <Navigation />
 
-  <!-- header -->
-  <section class="design--header">
-    <h1 class="design--header-title">
-      <div class="design--header-title-words">
-        <span class="visual-word">Visual</span>
-        <span class="designer-word">DESIGNER</span>
-      </div>
+  <div class="content--page">
+    <!-- header -->
+    <section class="design--header">
+      <h1 class="design--header-title">
+        <div class="design--header-title-words">
+          <span class="visual-word">Visual</span>
+          <span class="designer-word">DESIGNER</span>
+        </div>
 
-      <span class="portfolio-word">PORTFO<span class="green-l">L</span>IO</span>
-    </h1>
-    <div class="design--header-text">
-      <p>
-        <em
-          >I like design and experiences that feel intuitive & look amazing.</em
+        <span class="portfolio-word"
+          >PORTFO<span class="green-l">L</span>IO</span
         >
-      </p>
-      <p>
-        As a visual designer, I believe that aesthetics are intrinsically linked
-        to <b>usability and impact</b>. My aim is to craft interfaces that are
-        not only beautiful but also <b
-          >strategically enhance the user's journey</b
-        >. I translate brand identities and complex information into clean,
-        intuitive, and visually harmonious <b>digital experiences</b>.
-      </p>
-      <p>
-        I <b>obsess over the details</b>: typography, color palettes, spacing,
-        and iconography to ensure every element serves a purpose and contributes
-        to a <b>cohesive, engaging visual language</b>. My designs are built to
-        be visually compelling, emotionally resonant, and ultimately, effective
-        in <b> guiding users and achieving project goals</b>. I thrive on
-        bringing a distinct visual voice to every product, ensuring it stands
-        out while seamlessly integrating with the overall user experience.
-      </p>
-    </div>
-    <div class="design--header-cat-wrapper">
-      <div class="design--header-cat-bubble">
-        <p>Welcome to the <br /> design page.</p>
-      </div>
-      <img src={`${base}images/cat.png`} alt="cat with text" width="192" />
-      <div class="design--header-cat-line"></div>
-    </div>
-  </section>
-
-  <!-- work carousel -->
-  <section class="work--carousel">
-    <!-- Card 1: Brandboard -->
-    <div class="card brandboard">
-      <div class="card--image-container">
-        <img src={`${base}images/brandboard-background.png`} alt="brandboard" />
-      </div>
-      <div class="card--content">
-        <h2>Branding</h2>
+      </h1>
+      <div class="design--header-text">
         <p>
-          I created a branding for the MixBox brand, branding is much more than
-          just making a logo, curious what I created?
+          <em
+            >I like design and experiences that feel intuitive & look amazing.</em
+          >
         </p>
-        <a href="#branding" class="card--button">View more</a>
-      </div>
-    </div>
-
-    <!-- Card 2: Moodboard -->
-    <div class="card Moodboard">
-      <div class="card--image-container">
-        <img src={`${base}images/moodboard-background.png`} alt="Moodboard" />
-      </div>
-      <div class="card--content">
-        <h2>Moodboard</h2>
         <p>
-          I created a mood board for a new skincare brand. The purpose was to
-          set the vibe I wanted to create for this brand. curious what I
-          created?
+          As a visual designer, I believe that aesthetics are intrinsically
+          linked to <b>usability and impact</b>. My aim is to craft interfaces
+          that are not only beautiful but also <b
+            >strategically enhance the user's journey</b
+          >. I translate brand identities and complex information into clean,
+          intuitive, and visually harmonious <b>digital experiences</b>.
         </p>
-        <a href="#design" class="card--button">View more</a>
-      </div>
-    </div>
-
-    <!-- Card 3: Styleboard -->
-    <div class="card Styleboard">
-      <div class="card--image-container">
-        <img src={`${base}images/styleboard-background.png`} alt="Styleboard" />
-      </div>
-      <div class="card--content">
-        <h2>Styleboard</h2>
         <p>
-          It is the visual translation of that relaxed and luxurious vibe, and
-          lays the aesthetic foundation for the entire brand identity.
+          I <b>obsess over the details</b>: typography, color palettes, spacing,
+          and iconography to ensure every element serves a purpose and
+          contributes to a <b>cohesive, engaging visual language</b>. My designs
+          are built to be visually compelling, emotionally resonant, and
+          ultimately, effective in <b>
+            guiding users and achieving project goals</b
+          >. I thrive on bringing a distinct visual voice to every product,
+          ensuring it stands out while seamlessly integrating with the overall
+          user experience.
         </p>
-        <a href="#design" class="card--button">View more</a>
       </div>
-    </div>
-  </section>
+      <div class="design--header-cat-wrapper">
+        <div class="design--header-cat-bubble">
+          <p>Welcome to the <br /> design page.</p>
+        </div>
+        <img src={`${base}images/cat.png`} alt="cat with text" width="192" />
+        <div class="design--header-cat-line"></div>
+      </div>
+    </section>
 
-  <div class="strip--introduce">
-    <div class="strip-inner--introduce">
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-
-      <!-- Herhaling -->
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-      <span class="repeat">Let me introduce myself</span>
-    </div>
-  </div>
-
-  <!-- branding -->
-  <div class="design--navigation" id="branding">
-    <a href="#branding" class="active">Branding</a>
-    <a href="#design">Design</a>
-    <a href="#animation">Animation</a>
-  </div>
-
-  <section class="moodboard-section">
-    <div class="moodboard-content">
-      <div class="moodboard-texts">
-        <h3>Mix <br /> Box</h3>
-        <p class="hashtag">#Branding</p>
-        <div class="moodboard-description">
+    <!-- work carousel -->
+    <section class="work--carousel">
+      <!-- Card 1: Brandboard -->
+      <div class="card brandboard">
+        <div class="card--image-container">
+          <img
+            src={`${base}images/brandboard-background.png`}
+            alt="brandboard"
+          />
+        </div>
+        <div class="card--content">
+          <h2>Branding</h2>
           <p>
-            MixBox is a new subscription service that delivers various cocktail
-            boxes monthly or bi-monthly.
+            I created a branding for the MixBox brand, branding is much more
+            than just making a logo, curious what I created?
           </p>
-          <p>
-            The launch is scheduled for summer 2025 in Antwerp, with plans for
-            further expansion.
-          </p>
+          <a href="#branding" class="card--button">View more</a>
         </div>
       </div>
-      <div class="moodboard-image">
-        <img
-          src={`${base}images/brandboard.png`}
-          alt="Brandboard"
-          width="805"
-        />
-      </div>
-    </div>
-  </section>
 
-  <div class="design--navigation" id="design">
-    <a href="#branding">Branding</a>
-    <a href="#design" class="active">Design</a>
-    <a href="#animation">Animation</a>
-  </div>
-
-  <section class="moodboard-section">
-    <div class="moodboard-content">
-      <div class="moodboard-texts">
-        <h3>Mood <br /> board</h3>
-        <p class="hashtag">#SettingTheVibe</p>
-        <div class="moodboard-description">
-          <p>I created a mood board for a new skincare brand.</p>
+      <!-- Card 2: Moodboard -->
+      <div class="card Moodboard">
+        <div class="card--image-container">
+          <img src={`${base}images/moodboard-background.png`} alt="Moodboard" />
+        </div>
+        <div class="card--content">
+          <h2>Moodboard</h2>
           <p>
-            It was designed to set the perfect mood where the viewer feels
-            relaxed and luxurious.
+            I created a mood board for a new skincare brand. The purpose was to
+            set the vibe I wanted to create for this brand. curious what I
+            created?
           </p>
+          <a href="#design" class="card--button">View more</a>
         </div>
       </div>
-      <div class="moodboard-image">
-        <img
-          src={`${base}images/moodboard.png`}
-          alt="Moodboard"
-          width="804"
-          height="557"
-        />
-      </div>
-    </div>
-  </section>
 
-  <section class="moodboard-section">
-    <div class="moodboard-content">
-      <div class="moodboard-texts">
-        <h3>Style <br /> board</h3>
-        <p class="hashtag">#DesignDirection</p>
-        <div class="moodboard-description">
-          <p>
-            After capturing the mood with the mood board, I developed this style
-            board for the skincare brand.
-          </p>
+      <!-- Card 3: Styleboard -->
+      <div class="card Styleboard">
+        <div class="card--image-container">
+          <img
+            src={`${base}images/styleboard-background.png`}
+            alt="Styleboard"
+          />
+        </div>
+        <div class="card--content">
+          <h2>Styleboard</h2>
           <p>
             It is the visual translation of that relaxed and luxurious vibe, and
             lays the aesthetic foundation for the entire brand identity.
           </p>
+          <a href="#design" class="card--button">View more</a>
         </div>
       </div>
-      <div class="moodboard-image">
-        <img src={`${base}images/syleboard.png`} alt="Styleboard" width="804" />
+    </section>
+
+    <div class="strip--introduce">
+      <div class="strip-inner--introduce">
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+
+        <!-- Herhaling -->
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
+        <span class="repeat">Let me introduce myself</span>
       </div>
     </div>
-  </section>
 
-  <section class="moodboard-section">
-    <div class="moodboard-content">
-      <div class="moodboard-texts">
-        <h3>Social <br /> media</h3>
-        <p class="hashtag">#CreativeWork</p>
-        <div class="moodboard-description">
-          <p>
-            Here I present a selection of social media post designs for various
-            brands and occasions.
-          </p>
-          <p>
-            My goal is to visually translate each project's specific message and
-            branding into posts that not only stand out, but also make a direct
-            connection with followers.
-          </p>
+    <!-- branding -->
+    <div class="design--navigation" id="branding">
+      <a href="#branding" class="active">Branding</a>
+      <a href="#design">Design</a>
+      <a href="#animation">Animation</a>
+    </div>
+
+    <section class="moodboard-section">
+      <div class="moodboard-content">
+        <div class="moodboard-texts">
+          <h3>Mix <br /> Box</h3>
+          <p class="hashtag">#Branding</p>
+          <div class="moodboard-description">
+            <p>
+              MixBox is a new subscription service that delivers various
+              cocktail boxes monthly or bi-monthly.
+            </p>
+            <p>
+              The launch is scheduled for summer 2025 in Antwerp, with plans for
+              further expansion.
+            </p>
+          </div>
+        </div>
+        <div class="moodboard-image">
+          <img
+            src={`${base}images/brandboard.png`}
+            alt="Brandboard"
+            width="805"
+          />
         </div>
       </div>
-      <div class="moodboard-image">
-        <img src={`${base}images/posts.png`} alt="Posts" width="804" />
+    </section>
+
+    <div class="design--navigation" id="design">
+      <a href="#branding">Branding</a>
+      <a href="#design" class="active">Design</a>
+      <a href="#animation">Animation</a>
+    </div>
+
+    <section class="moodboard-section">
+      <div class="moodboard-content">
+        <div class="moodboard-texts">
+          <h3>Mood <br /> board</h3>
+          <p class="hashtag">#SettingTheVibe</p>
+          <div class="moodboard-description">
+            <p>I created a mood board for a new skincare brand.</p>
+            <p>
+              It was designed to set the perfect mood where the viewer feels
+              relaxed and luxurious.
+            </p>
+          </div>
+        </div>
+        <div class="moodboard-image">
+          <img
+            src={`${base}images/moodboard.png`}
+            alt="Moodboard"
+            width="804"
+            height="557"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="moodboard-section">
+      <div class="moodboard-content">
+        <div class="moodboard-texts">
+          <h3>Style <br /> board</h3>
+          <p class="hashtag">#DesignDirection</p>
+          <div class="moodboard-description">
+            <p>
+              After capturing the mood with the mood board, I developed this
+              style board for the skincare brand.
+            </p>
+            <p>
+              It is the visual translation of that relaxed and luxurious vibe,
+              and lays the aesthetic foundation for the entire brand identity.
+            </p>
+          </div>
+        </div>
+        <div class="moodboard-image">
+          <img
+            src={`${base}images/syleboard.png`}
+            alt="Styleboard"
+            width="804"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="moodboard-section">
+      <div class="moodboard-content">
+        <div class="moodboard-texts">
+          <h3>Social <br /> media</h3>
+          <p class="hashtag">#CreativeWork</p>
+          <div class="moodboard-description">
+            <p>
+              Here I present a selection of social media post designs for
+              various brands and occasions.
+            </p>
+            <p>
+              My goal is to visually translate each project's specific message
+              and branding into posts that not only stand out, but also make a
+              direct connection with followers.
+            </p>
+          </div>
+        </div>
+        <div class="moodboard-image">
+          <img src={`${base}images/posts.png`} alt="Posts" width="804" />
+        </div>
+      </div>
+    </section>
+
+    <div class="design--navigation" id="animation">
+      <a href="#branding">Branding</a>
+      <a href="#design">Design</a>
+      <a href="#animation" class="active">Animation</a>
+    </div>
+
+    <section id="animation" class="animation">
+      <video
+        src={`${base}videos/animation.mp4`}
+        class="animation--video"
+        autoplay
+        muted
+        loop
+        playsinline></video>
+    </section>
+
+    <div class="strip--work">
+      <div class="strip-inner--work">
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+
+        <!-- Herhaling -->
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
       </div>
     </div>
-  </section>
-
-  <div class="design--navigation" id="animation">
-    <a href="#branding">Branding</a>
-    <a href="#design">Design</a>
-    <a href="#animation" class="active">Animation</a>
   </div>
-
-  <section id="animation" class="animation">
-    <video
-      src={`${base}videos/animation.mp4`}
-      class="animation--video"
-      autoplay
-      muted
-      loop
-      playsinline></video>
-  </section>
-
-  <div class="strip--work">
-    <div class="strip-inner--work">
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-
-      <!-- Herhaling -->
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-      <span class="repeat">Let's work together</span>
-    </div>
-  </div>
-
   <!-- Footer -->
   <Footer />
 </body>

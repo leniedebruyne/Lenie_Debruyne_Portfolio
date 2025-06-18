@@ -36,281 +36,283 @@ const base = import.meta.env.BASE_URL;
   <body>
     <Navigation />
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="badges">
-        <a href={`${base}design#animation`} class="badge motion"
-          >motion designer</a
-        >
-        <a href={`${base}ux`} class="badge-link">
-          <span class="badge ux">ux designer</span>
-        </a>
-        <a href={`${base}design`} class="badge-link">
-          <span class="badge visual">visual designer</span>
-        </a>
-      </div>
-      <h1 class="hero-title desktop-title">
-        <img src={`${base}images/Header-P.svg`} alt="P" class="p-tail" />
-        ortfo<span class="highlight-l">l</span>io
-      </h1>
-
-      <p class="hero-title mobile-title">Portfolio</p>
-
-      <h2>Lenie Debruyne</h2>
-    </section>
-
-    <!-- Nav Strip -->
-    <div class="strip--introduce">
-      <div class="strip-inner--introduce">
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-
-        <!-- Herhaling -->
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-        <span class="repeat">Let me introduce myself</span>
-      </div>
-    </div>
-
-    <section class="about">
-      <img
-        src={`${base}images/photo_Lenie.png`}
-        alt="Foto van Lenie"
-        width="308.6px"
-      />
-      <div class="about-text">
-        <h3>Hi! I’m Lenie,</h3>
-        <p>
-          <em
-            >And I like design and experiences that feel intuitive & look
-            amazing.</em
+    <div class="content--page">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="badges">
+          <a href={`${base}design#animation`} class="badge motion"
+            >motion designer</a
           >
-        </p>
-        <p>
-          I am in my 2nd year Digital Design and Development, where I learned
-          how to <b>
-            turn my creativity into functional and visually strong digital
-            products
-          </b>.
-        </p>
-        <p>
-          I love to constantly <b> redefine my skills </b>, learning about my
-          projects and always developping myself as a human.
-        </p>
-        <h4>My interests</h4>
-        <div class="tags">
-          <span class="highlight">Digital products</span>
-          <span>Photography</span>
-          <span>Art</span>
+          <a href={`${base}ux`} class="badge-link">
+            <span class="badge ux">ux designer</span>
+          </a>
+          <a href={`${base}design`} class="badge-link">
+            <span class="badge visual">visual designer</span>
+          </a>
         </div>
-      </div>
-    </section>
+        <h1 class="hero-title desktop-title">
+          <img src={`${base}images/Header-P.svg`} alt="P" class="p-tail" />
+          ortfo<span class="highlight-l">l</span>io
+        </h1>
 
-    <!-- About -->
-    <section class="skills-education">
-      <!-- SKILLS -->
-      <div class="skills">
-        <h2 class="about-title">My Skills</h2>
-        <div class="skills-grid">
-          <div class="skill">
-            <img src={`${base}images/Illustrator.png`} alt="Illustrator" />
+        <p class="hero-title mobile-title">Portfolio</p>
 
-            <div>
-              <p>Illustrator</p>
-              <div class="dots">
-                <span class="filled"></span><span class="filled"></span><span
-                  class="filled"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <img src={`${base}images/blender.png`} alt="Blender" />
-            <div>
-              <p>Blender</p>
-              <div class="dots">
-                <span class="filled"></span><span class="filled"></span><span
-                ></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <img src={`${base}images/Photoshop.png`} alt="Photoshop" />
-            <div>
-              <p>Photoshop</p>
-              <div class="dots">
-                <span class="filled"></span><span class="filled"></span><span
-                ></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <img src={`${base}images/AfterEffects.png`} alt="After Effects" />
-            <div>
-              <p>After Effects</p>
-              <div class="dots">
-                <span class="filled"></span><span class="filled"></span><span
-                ></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <img src={`${base}images/Figma.png`} alt="Figma" />
-            <div>
-              <p>Figma</p>
-              <div class="dots">
-                <span class="filled"></span><span class="filled"></span><span
-                  class="filled"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <img src={`${base}images/Fresco.png`} alt="Fresco" />
-            <div>
-              <p>Fresco</p>
-              <div class="dots">
-                <span class="filled"></span><span class="filled"></span><span
-                  class="filled"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <img src={`${base}images/Figma.png`} alt="Figjam" />
-            <div>
-              <p>Figjam</p>
-              <div class="dots">
-                <span class="filled"></span><span class="filled"></span><span
-                ></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <img src={`${base}images/Miro.png`} alt="Miro" />
-            <div>
-              <p>Miro</p>
-              <div class="dots">
-                <span class="filled"></span><span class="filled"></span><span
-                  class="filled"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- EDUCATION -->
-      <div class="education">
-        <h2 class="about-title">My education</h2>
-        <div class="timeline">
-          <div class="event">
-            <p class="year">2017 - 2023</p>
-            <div class="dot-line"></div>
-            <p class="desc">Creation and Fashion design</p>
-          </div>
-          <div class="event">
-            <p class="year">2023 - 2027</p>
-            <div class="dot-line"></div>
-            <p class="desc">Digital Design and Development</p>
-          </div>
-          <div class="event">
-            <p class="year">2027 - ...</p>
-            <div class="dot-line"></div>
-            <p class="desc">The next step</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Welcome Message -->
-    <div class="welcome--message">
-      <section class="welcome">
-        <h3>Hey, welcome to my portfolio!</h3>
-        <p>
-          I am Lenie Debruyne and I obtained a bachelor's degree in <b>
-            Digital Design and Development</b
-          >. From a young age my head was <b> full of creative ideas</b>, I was
-          always making things, designing and experimenting. I wanted to use
-          that creativity later <b> to help people </b>.
-        </p>
+        <h2>Lenie Debruyne</h2>
       </section>
-    </div>
 
-    <div class="somming-soon--title-center">
-      <h3 class="comming-soon-title">Some of the work I’m excited about</h3>
-    </div>
+      <!-- Nav Strip -->
+      <div class="strip--introduce">
+        <div class="strip-inner--introduce">
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
 
-    <!-- Coming Soon -->
-    <section class="coming-soon">
-      <div class="coming-box">
-        <h1 class="coming-soon--banner">COMING SOON <br /> COMING SOON</h1>
-        <div class="project-box">
-          <h4>Passion <br /> Project</h4>
-          <p>2025</p>
+          <!-- Herhaling -->
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me introduce myself</span>
         </div>
       </div>
-    </section>
 
-    <!-- Moodboard -->
-    <section class="moodboard-section">
-      <div class="moodboard-content">
-        <div class="moodboard-texts">
-          <h3>Mood <br /> board</h3>
-          <p class="hashtag">#SettingTheVibe</p>
-          <div class="moodboard-description">
-            <p>I created a mood board for a new skincare brand.</p>
-            <p>
-              It was designed to set the perfect mood where the viewer feels
-              relaxed and luxurious.
-            </p>
+      <section class="about">
+        <img
+          src={`${base}images/photo_Lenie.png`}
+          alt="Foto van Lenie"
+          width="308.6px"
+        />
+        <div class="about-text">
+          <h3>Hi! I’m Lenie,</h3>
+          <p>
+            <em
+              >And I like design and experiences that feel intuitive & look
+              amazing.</em
+            >
+          </p>
+          <p>
+            I am in my 2nd year Digital Design and Development, where I learned
+            how to <b>
+              turn my creativity into functional and visually strong digital
+              products
+            </b>.
+          </p>
+          <p>
+            I love to constantly <b> redefine my skills </b>, learning about my
+            projects and always developping myself as a human.
+          </p>
+          <h4>My interests</h4>
+          <div class="tags">
+            <span class="highlight">Digital products</span>
+            <span>Photography</span>
+            <span>Art</span>
           </div>
         </div>
-        <div class="moodboard-image">
-          <img
-            src={`${base}images/moodboard.png`}
-            alt="Moodboard"
-            width="804"
-            height="557"
-          />
+      </section>
+
+      <!-- About -->
+      <section class="skills-education">
+        <!-- SKILLS -->
+        <div class="skills">
+          <h2 class="about-title">My Skills</h2>
+          <div class="skills-grid">
+            <div class="skill">
+              <img src={`${base}images/Illustrator.png`} alt="Illustrator" />
+
+              <div>
+                <p>Illustrator</p>
+                <div class="dots">
+                  <span class="filled"></span><span class="filled"></span><span
+                    class="filled"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src={`${base}images/blender.png`} alt="Blender" />
+              <div>
+                <p>Blender</p>
+                <div class="dots">
+                  <span class="filled"></span><span class="filled"></span><span
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src={`${base}images/Photoshop.png`} alt="Photoshop" />
+              <div>
+                <p>Photoshop</p>
+                <div class="dots">
+                  <span class="filled"></span><span class="filled"></span><span
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src={`${base}images/AfterEffects.png`} alt="After Effects" />
+              <div>
+                <p>After Effects</p>
+                <div class="dots">
+                  <span class="filled"></span><span class="filled"></span><span
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src={`${base}images/Figma.png`} alt="Figma" />
+              <div>
+                <p>Figma</p>
+                <div class="dots">
+                  <span class="filled"></span><span class="filled"></span><span
+                    class="filled"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src={`${base}images/Fresco.png`} alt="Fresco" />
+              <div>
+                <p>Fresco</p>
+                <div class="dots">
+                  <span class="filled"></span><span class="filled"></span><span
+                    class="filled"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src={`${base}images/Figma.png`} alt="Figjam" />
+              <div>
+                <p>Figjam</p>
+                <div class="dots">
+                  <span class="filled"></span><span class="filled"></span><span
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <img src={`${base}images/Miro.png`} alt="Miro" />
+              <div>
+                <p>Miro</p>
+                <div class="dots">
+                  <span class="filled"></span><span class="filled"></span><span
+                    class="filled"></span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- EDUCATION -->
+        <div class="education">
+          <h2 class="about-title">My education</h2>
+          <div class="timeline">
+            <div class="event">
+              <p class="year">2017 - 2023</p>
+              <div class="dot-line"></div>
+              <p class="desc">Creation and Fashion design</p>
+            </div>
+            <div class="event">
+              <p class="year">2023 - 2027</p>
+              <div class="dot-line"></div>
+              <p class="desc">Digital Design and Development</p>
+            </div>
+            <div class="event">
+              <p class="year">2027 - ...</p>
+              <div class="dot-line"></div>
+              <p class="desc">The next step</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Welcome Message -->
+      <div class="welcome--message">
+        <section class="welcome">
+          <h3>Hey, welcome to my portfolio!</h3>
+          <p>
+            I am Lenie Debruyne and I obtained a bachelor's degree in <b>
+              Digital Design and Development</b
+            >. From a young age my head was <b> full of creative ideas</b>, I
+            was always making things, designing and experimenting. I wanted to
+            use that creativity later <b> to help people </b>.
+          </p>
+        </section>
       </div>
-    </section>
 
-    <div class="strip--work">
-      <div class="strip-inner--work">
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
+      <div class="somming-soon--title-center">
+        <h3 class="comming-soon-title">Some of the work I’m excited about</h3>
+      </div>
 
-        <!-- Herhaling -->
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
-        <span class="repeat">Let's work together</span>
+      <!-- Coming Soon -->
+      <section class="coming-soon">
+        <div class="coming-box">
+          <h1 class="coming-soon--banner">COMING SOON <br /> COMING SOON</h1>
+          <div class="project-box">
+            <h4>Passion <br /> Project</h4>
+            <p>2025</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Moodboard -->
+      <section class="moodboard-section">
+        <div class="moodboard-content">
+          <div class="moodboard-texts">
+            <h3>Mood <br /> board</h3>
+            <p class="hashtag">#SettingTheVibe</p>
+            <div class="moodboard-description">
+              <p>I created a mood board for a new skincare brand.</p>
+              <p>
+                It was designed to set the perfect mood where the viewer feels
+                relaxed and luxurious.
+              </p>
+            </div>
+          </div>
+          <div class="moodboard-image">
+            <img
+              src={`${base}images/moodboard.png`}
+              alt="Moodboard"
+              width="804"
+              height="557"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div class="strip--work">
+        <div class="strip-inner--work">
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+
+          <!-- Herhaling -->
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+        </div>
       </div>
     </div>
 
