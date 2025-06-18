@@ -34,7 +34,7 @@ html {
 
 body {
     overflow-x: hidden;
-    margin: 0;
+    margin: 0 auto;
     font-family: var(--font-bodycopy);
     color: var(--c-dark-green);
     background-color: var(--c-beige);
