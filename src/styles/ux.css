@@ -577,3 +577,391 @@ footer {
     max-width: 100%;
     height: auto;
 }
+
+/* ===== MOBILE FIRST ===== */
+@media (max-width: 768px) {
+    /* ===== Navigation and Footer ===== */
+
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .top-bar nav {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .top-bar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        padding: 0;
+    }
+
+    .top-bar ul a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .top-bar ul a:last-child {
+        border-bottom: none;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        gap: 1.5rem;
+        width: 90%;
+    }
+
+    .contact,
+    .connect {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-text {
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-text:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .footer-text strong {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .footer-text img {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    .footer-banner {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        height: auto;
+        padding: 0 1rem;
+        word-break: break-word;
+    }
+
+    /* ===== Header ===== */
+
+    /* Reset the main container (h1) */
+    .design--header-title {
+        height: auto;
+        min-height: 200px;
+        margin: 30px auto 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+        text-align: center;
+    }
+
+
+    /* container 'Visual DESIGNER' */
+    .design--header-title-words {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 0.8;
+        margin-bottom: 0.8rem;
+        width: 100%;
+    }
+
+    /*word 'Visual' */
+    .design--header-title .visual-word {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        color: var(--c-dark-green);
+        font-weight: 600;
+        letter-spacing: 0;
+        -webkit-text-fill-color: var(--c-dark-green);
+        -webkit-text-stroke: 0;
+    }
+
+    /*word 'designer' */
+    .design--header-title .designer-word {
+        margin-left: -15px;
+        font-size: clamp(4rem, 15vw, 6.5rem);
+        color: var(--c-pink);
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        -webkit-text-fill-color: var(--c-pink);
+        -webkit-text-stroke: 0;
+    }
+
+    /* word 'portfolio' */
+    .design--header-title .portfolio-word {
+        margin-top: -50px;
+        font-size: clamp(3rem, 12vw, 5rem);
+        -webkit-text-stroke: 1px var(--c-dark-green);
+        -webkit-text-fill-color: transparent;
+        color: var(--c-dark-green);
+        font-weight: 400;
+    }
+
+    /* word 'portfolio' -> l */
+    .design--header-title .green-l {
+        -webkit-text-stroke: 1px var(--c-light-green);
+        -webkit-text-fill-color: transparent;
+        color: var(--c-light-green);
+        position: static;
+    }
+
+    /* ===== Cat ===== */
+    .design--header-cat-wrapper {
+        display: none;   
+    }
+
+    /* ===== intro text ===== */
+    .design--header-text {
+        margin-top: -0.5rem;
+        margin-bottom: 5rem;   
+    }
+
+    /* ===== navigation on site ===== */
+    .design--navigation {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        align-items: center;
+    }
+
+    .design--navigation a {
+        width: 100%;
+        max-width: 250px;
+        padding: 10px 0;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* ===== animation ===== */
+    .animation--video {
+        padding-top: 1.5rem;
+        padding-bottom: 6rem;
+        max-width: 100%;   }
+
+
+    /* ===== Moodboard ===== */
+    .moodboard-section {
+        padding: 4rem 1rem;
+    }
+
+    .moodboard-content {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        width: 100%;
+        max-width: none;
+    }
+
+    .moodboard-texts {
+        text-align: center;
+        align-items: center;
+    }
+
+    .moodboard-texts h3 {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+
+    .moodboard-texts .hashtag {
+        font-size: 1rem;
+    }
+
+    .moodboard-description p {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.9rem;
+    }
+
+    .moodboard-image {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .moodboard-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* ===== Comming soon ===== */
+    .comming-soon-title {
+        font-size: 35px;
+    }
+
+    .coming-soon--banner {
+        font-size: 75px;
+        margin-top: 0rem;
+        margin-bottom: 8rem;
+    }
+
+    .project-box {
+        padding: 1rem;
+        box-shadow: 0 0 0 0.5rem white;
+        position: static;
+        margin: 2rem auto;
+        max-width: 90%;
+        box-sizing: border-box;
+    }
+
+    .project-box h4 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .project-box p {
+        font-size: 4.5rem;
+        margin: 0.5rem 0 0;
+    }
+
+
+    /* ===== Comming soon ===== */
+    .dubble-diamond--text{
+        max-width: 80%;
+    }
+    
+}
+
+
+/* ===== TABLET ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* ===== footer ===== */
+    .footer-banner {
+        font-size: var(--step-4);
+    }
+
+    .footer-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* ===== cat ===== */
+    .design--header-cat-wrapper {
+        display: none;
+    }
+
+
+    /* ===== Header ===== */
+    /* Reset the main container (h1) */
+    .design--header-title {
+        height: auto;
+        min-height: 200px;
+        margin: 30px auto 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+        text-align: center;
+    }
+
+
+    /* container 'Visual DESIGNER' */
+    .design--header-title-words {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 0.8;
+        margin-bottom: 0.8rem;
+        width: 100%;
+    }
+
+    /*word 'Visual' */
+    .design--header-title .visual-word {
+        margin-top: 3rem;
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        color: var(--c-dark-green);
+        font-weight: 600;
+        letter-spacing: 0;
+        -webkit-text-fill-color: var(--c-dark-green);
+        -webkit-text-stroke: 0;
+    }
+
+    /*word 'designer' */
+    .design--header-title .designer-word {
+        margin-left: -6rem;
+        font-size: clamp(4rem, 15vw, 6.5rem);
+        color: var(--c-pink);
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        -webkit-text-fill-color: var(--c-pink);
+        -webkit-text-stroke: 0;
+    }
+
+    /* word 'portfolio' */
+    .design--header-title .portfolio-word {
+        margin-top: -4rem;
+        margin-left: 9rem;
+        font-size: clamp(3rem, 12vw, 5rem);
+        -webkit-text-stroke: 1px var(--c-dark-green);
+        -webkit-text-fill-color: transparent;
+        color: var(--c-dark-green);
+        font-weight: 400;
+    }
+
+    /* word 'portfolio' -> l */
+    .design--header-title .green-l {
+        -webkit-text-stroke: 1px var(--c-light-green);
+        -webkit-text-fill-color: transparent;
+        color: var(--c-light-green);
+        position: static;
+    }
+
+    .design--header-text {
+        margin-top: 1rem;
+        margin-bottom: 6rem;
+    }
+
+
+ .design--navigation a {
+    font-size: 25px;
+ }
+
+    /* ===== Moodboard ===== */
+
+    .moodboard-image {
+        width: 70%;
+        max-width: 350px;
+    }
+
+}
+
+/* ===== Monitor ===== */
+@media (min-width: 1201px) {
+    body {
+        max-width: 1600px;
+    }
+}
