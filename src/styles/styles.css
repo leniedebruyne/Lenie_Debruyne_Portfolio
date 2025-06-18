@@ -111,6 +111,20 @@ p{
     position: relative;
 }
 
+
+.mobile-title {
+    display: none; }
+
+
+
+.p-fallback {
+    display: none;
+}
+
+.p-tail-wrapper {
+    display: inline-block;
+    position: relative; }
+
 .badges {
     position: absolute;
     top: 50%;
@@ -618,3 +632,412 @@ footer {
     width: 100%;
     height: 12rem;
     gap: 2rem; }
+
+
+
+/* ===== MOBILE FIRST ===== */
+@media (max-width: 768px) {
+    /* ===== Navigation ===== */
+
+    .top-bar {
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+    
+        .top-bar nav {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    
+        .top-bar ul {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+            padding: 0;
+        }
+    
+        .top-bar ul a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    
+        .top-bar ul a:last-child {
+            border-bottom: none;
+        }
+
+
+    /* ===== Hero ===== */
+    .hero h1.desktop-title {
+            display: none !important;
+        }
+    
+        h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+    
+        h2 {
+            font-size: clamp(1.25rem, 5vw, 2rem);
+            transform: none;
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
+    
+        .mobile-title {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+    
+        .highlight-l {
+            margin-left: -40px;
+        }
+    
+        .badges {
+            position: static;
+            transform: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem auto;
+        }
+
+        .badges .badge {
+            position: static;
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            margin: 0.5rem auto;
+            text-align: center;
+        }
+
+        .badge::after {
+        display: none;
+        }
+    
+        .strip--introduce {
+            margin-top: 0;
+            padding: 2rem 1rem;
+        }
+    
+        .about,
+        .skills-education {
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+    
+        .about-title,
+        .education .about-title {
+            position: static;
+            margin: 2rem 0 1rem;
+            text-align: center;
+        }
+    
+        .skills-education::before {
+            display: none;
+        }
+
+        .skills-education {
+            flex-direction: column;
+            gap: 2rem;
+            padding: 3rem 1rem;
+        }
+
+        .skills-education::before {
+            content: none;
+        }
+
+        .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .skill {
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .skill img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .skill>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }
+
+    
+        img {
+            max-width: 60%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    
+        .hero h1 {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            text-align: center;
+            margin: 1rem auto 0;
+            display: block;
+        }
+    
+        .hero h1 img.p-tail {
+            display: none;
+        }
+    
+        .hero h1 .highlight-l {
+            color: inherit;
+        }
+    
+        .hero h2 {
+            font-size: 1.25rem;
+            text-align: center;
+            margin-top: -1rem;           
+        }
+    
+         /* ===== My intrest ===== */
+
+        .tags span {
+            display: block;
+            margin-right: 0;
+            margin-bottom: 0.5rem;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tags span:last-child {
+            margin-bottom: 0;
+        }
+
+        .tags {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }
+
+        /* ===== Comming soon ===== */
+        .comming-soon-title{
+            font-size: 35px;
+        }
+
+        .coming-soon--banner{
+            font-size: 75px;
+            margin-top: 0rem;
+            margin-bottom: 8rem;
+        }
+
+        .project-box {
+            padding: 1rem;
+            box-shadow: 0 0 0 0.5rem white;
+            position: static;
+            margin: 2rem auto;
+            max-width: 90%;
+            box-sizing: border-box;
+        }
+
+        .project-box h4 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+
+        .project-box p {
+            font-size: 4.5rem;
+            margin: 0.5rem 0 0;
+        }
+
+        /* ===== Moodboard ===== */
+        .moodboard-section {
+            padding: 4rem 1rem;
+        }
+
+        .moodboard-content {
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            width: 100%;
+            max-width: none;
+        }
+
+        .moodboard-texts {
+            text-align: center;
+            align-items: center;
+        }
+
+        .moodboard-texts h3 {
+            font-size: 3rem;
+            line-height: 1.1;
+        }
+
+        .moodboard-texts .hashtag {
+            font-size: 1rem;
+        }
+
+        .moodboard-description p {
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 0.9rem;
+        }
+
+        .moodboard-image {
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .moodboard-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* ===== Footer ===== */
+
+        footer {
+            padding: 1.5rem 1rem;
+        }
+
+        .footer-info {
+            flex-direction: column;
+            align-items: flex-start;
+            height: auto;
+            gap: 1.5rem;
+            width: 90%;
+        }
+
+        .contact,
+        .connect {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-text {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-text:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .footer-text strong {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        .footer-text img {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .footer-banner {
+            font-size: 2.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+            height: auto;
+            padding: 0 1rem;
+            word-break: break-word;   
+        }
+
+
+
+
+                }
+
+        /* ===== TABLET ===== */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            h1 {
+                font-size: clamp(3rem, 10vw, 6rem);
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            h2 {
+                transform: translate(0, 0);
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .badges {
+                position: static;
+                transform: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .badges .badge {
+                position: static;
+                margin: 0.5rem auto;
+                font-size: clamp(1.5rem, 3vw, 2rem);
+            }
+
+            .badge::after {
+                display: none;
+            }
+
+            .strip--introduce {
+                margin-top: 0;
+            }
+
+            .skills-education {
+                flex-direction: column;
+                padding: 3rem 1rem;
+            }
+
+            .about {
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 1rem;
+            }
+
+            .about-title,
+            .education .about-title {
+                position: static;
+                margin: 2rem 0 1rem;
+                text-align: center;
+            }       
+        
+            .skills-education::before {
+                display: none;
+                    }
+
+            .footer-banner {
+                font-size: var(--step-4);
+            }
+
+            .footer-info {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;                       }
+        
+        }
+
+
+        /* ===== Monitor ===== */
+        @media (min-width: 1201px) {
+            body {
+                max-width: 1600px;
+            }
+            }
