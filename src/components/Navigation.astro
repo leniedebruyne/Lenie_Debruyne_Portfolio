@@ -6,17 +6,21 @@ const base = import.meta.env.BASE_URL;
   <a href="/Lenie_Debruyne_Portfolio/" class="badge-link">
     <img src={`${base}images/logo.svg`} alt="logo" class="logo" />
   </a>
-  <nav>
+
+  <button class="hamburger-menu" aria-label="Toggle navigation">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <nav class="main-nav">
     <ul>
-      <a href={`${base}design`} class="badge-link">
-        <li>Visual designer</li>
-      </a>
-      <a href={`${base}ux`} class="badge-link">
-        <li>Experience designer</li>
-      </a>
-      <a href={`${base}design#animation`} class="badge-link">
-        <li>Motion designer</li>
-      </a>
+      <li><a href={`${base}design`} class="badge-link">Visual designer</a></li>
+      <li><a href={`${base}ux`} class="badge-link">Experience designer</a></li>
+      <li>
+        <a href={`${base}design#animation`} class="badge-link"
+          >Motion designer</a>
+      </li>
     </ul>
   </nav>
 </header>
