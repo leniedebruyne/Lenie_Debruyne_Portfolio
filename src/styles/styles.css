@@ -738,6 +738,11 @@ footer {
         text-align: center;
     }
 
+    .about--interests {
+        display: flex;
+        justify-content: center;
+    }
+
     .skills-education::before {
         display: none;
     }
@@ -762,7 +767,7 @@ footer {
         justify-content: center;
         text-align: center;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0rem;
     }
 
     .skill img {
@@ -772,8 +777,10 @@ footer {
 
     .skill>div {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 0rem;
+            margin-bottom: 2rem;
     }
 
 
