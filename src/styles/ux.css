@@ -79,29 +79,10 @@ footer {
     gap: 2rem;
 }
 
-.logo {
+/*  .logo {
     width: 35px;
     height: 30.7px;
-}
-
-.top-bar {
-    background-color: var(--c-dark-green);
-    color: var(--c-beige);
-    padding: 1rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.top-bar ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-.hamburger-menu {
-    display: none;
-}
+} */
 
 
 .badge-link {
@@ -585,81 +566,7 @@ footer {
 }
 
 /* ===== MOBILE FIRST ===== */
-/* ===== MOBILE FIRST ===== */
 @media (max-width: 768px) {
-    /* ===== Navigation and Footer ===== */
-
-    .top-bar {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem;
-            position: relative;
-        }
-    
-        .hamburger-menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 30px;
-            height: 25px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            z-index: 1001;
-        }
-    
-        .hamburger-menu .bar {
-            width: 100%;
-            height: 3px;
-            background-color: var(--c-beige);
-            border-radius: 2px;
-            transition: all 0.3s ease-in-out;
-        }
-    
-        .main-nav {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background-color: var(--c-dark-green);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            padding-bottom: 1rem;
-        }
-    
-        .main-nav.nav-open {
-            display: block;
-        }
-    
-        .main-nav ul {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-    
-        .top-bar ul a {
-            display: block;
-            padding: 0.8rem 1rem;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            width: 100%;
-            box-sizing: border-box;
-        }
-    
-        .top-bar ul a:last-child {
-            border-bottom: none;
-        }
-    
-        .logo {
-            height: 1.5rem;
-            width: auto;
-        }
 
     footer {
         padding: 1.5rem 1rem;

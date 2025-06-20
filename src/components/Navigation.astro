@@ -2,7 +2,120 @@
 const base = import.meta.env.BASE_URL;
 ---
 
-<header class="top-bar">
+<style>
+  .logo {
+    height: 1.5rem;
+    width: auto;
+  }
+
+  .top-bar {
+    background-color: var(--c-dark-green);
+    color: var(--c-beige);
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .top-bar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .top-bar .logo {
+    height: 1.5rem;
+    width: auto;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 768px) {
+    .top-bar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .hamburger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 25px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1001;
+    }
+
+    .hamburger-menu .bar {
+      width: 100%;
+      height: 3px;
+      background-color: var(--c-beige);
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .main-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--c-dark-green);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      padding-bottom: 1rem;
+    }
+
+    .main-nav.nav-open {
+      display: block;
+    }
+
+    .top-bar nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+      padding: 0;
+    }
+
+    .top-bar ul a {
+      display: block;
+      padding: 0.8rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .top-bar .logo {
+      height: 1.5rem;
+      width: auto;
+    }
+
+    .top-bar ul a:last-child {
+      border-bottom: none;
+    }
+    
+    .logo {
+      height: 1.5rem;
+      width: auto;
+    }
+  }
+</style>
+
+<header class="top-bar" id="top-bar">
   <a href="/Lenie_Debruyne_Portfolio/" class="badge-link">
     <img src={`${base}images/logo.svg`} alt="logo" class="logo" />
   </a>
@@ -19,8 +132,40 @@ const base = import.meta.env.BASE_URL;
       <li><a href={`${base}ux`} class="badge-link">Experience designer</a></li>
       <li>
         <a href={`${base}design#animation`} class="badge-link"
-          >Motion designer</a>
+          >Motion designer</a
+        >
       </li>
     </ul>
   </nav>
 </header>
+
+<!-- <script client:load>
+  const hamburgerButton = document.querySelector(".hamburger-menu");
+  const mainNav = document.querySelector(".main-nav");
+
+  if (hamburgerButton && mainNav) {
+    hamburgerButton.addEventListener("click", () => {
+      hamburgerButton.classList.toggle("active");
+      mainNav.classList.toggle("nav-open");
+    });
+
+    document.querySelectorAll(".main-nav ul a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("nav-open");
+        hamburgerButton.classList.remove("active");
+      });
+    });
+
+    const isMobile = window.matchMedia("(max-width: 768px)");
+
+    function checkMobile(e) {
+      if (!e.matches && mainNav.classList.contains("nav-open")) {
+        hamburgerButton.classList.remove("active");
+        mainNav.classList.remove("nav-open");
+      }
+    }
+
+    checkMobile(isMobile);
+    isMobile.addEventListener("change", checkMobile);
+  }
+</script> -->
