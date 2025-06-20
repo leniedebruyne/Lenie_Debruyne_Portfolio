@@ -677,10 +677,10 @@ footer {
     }
 
     /* =====Banner ===== */
-    .strip--introduce,
-    .strip--work {
-        margin-left: 0rem;
-    }
+.strip--introduce , .strip--work{
+   display: none;
+}
+
 
 }
 

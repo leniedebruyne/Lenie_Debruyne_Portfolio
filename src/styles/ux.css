@@ -804,11 +804,10 @@ footer {
         max-width: 80%;
     }
 
-    /* =====Banner ===== */
-    .strip--introduce,
-    .strip--work {
-        margin-left: 0rem;
-    }
+        /* =====Banner ===== */
+        .strip--introduce,
+        .strip--work {
+            display: none;    }
 
 }
 
