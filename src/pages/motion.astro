@@ -1,0 +1,247 @@
+---
+// motion.astro
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/motion.css";
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Lenie Debruyne</title>
+    <link rel="icon" type="image/svg+xml" href={`${base}images/favicon.svg`} />
+    <link rel="
+          stylesheet" href="styles.css" />
+
+    <!-- Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <Navigation />
+
+    <div class="content--page">
+      <!-- header -->
+      <section class="design--header">
+        <h1 class="design--header-title">
+          <div class="design--header-title-words">
+            <span class="visual-word">Motion & 3D</span>
+            <span class="designer-word">DESIGNER</span>
+          </div>
+
+          <span class="portfolio-word"
+            >PORTFO<span class="green-l">L</span>IO</span
+          >
+        </h1>
+        <div class="design--header-text">
+          <p>
+            <em>I create visuals that move, and move you. </em>
+          </p>
+          <p>
+            As a <b>motion designer</b>, I see <b>motion</b> as the bridge between
+            visuals and emotion. Whether it’s a 3D render in <b>Blender</b> or a
+            motion piece in <b>After Effects</b>, my goal is to make ideas move,
+            literally and emotionally. I design animations that tell stories,
+            enhance brand identity, and bring digital experiences to life
+            through movement, light, and rhythm.
+          </p>
+          <p>
+            Every frame matters. From <b>timing and easing</b> to composition and
+            texture, I craft visuals that feel <b>intentional and immersive</b>.
+            My work blends aesthetic precision with narrative flow, creating
+            animations that are not only <b>visually striking</b> but also <b
+              >strategically impactful</b
+            >. I love turning static concepts into dynamic visuals that
+            captivate, communicate, and connect.
+          </p>
+        </div>
+        <div class="design--header-cat-wrapper">
+          <div class="design--header-cat-bubble">
+            <p>Welcome to the <br /> motion & 3D page.</p>
+          </div>
+          <img src={`${base}images/cat.png`} alt="cat with text" width="192" />
+          <div class="design--header-cat-line"></div>
+        </div>
+      </section>
+
+      <!-- work carousel -->
+      <section class="work--carousel">
+        <!-- Card 1: After effects -->
+        <div class="card brandboard">
+          <div class="card--image-container">
+            <img src={`${base}images/Animation.png`} alt="brandboard" />
+          </div>
+          <div class="card--content">
+            <h2>Animation</h2>
+            <p>
+              I created a promo video for a Kickstarter project, the cat basket.
+              I did the animation with After Effects. Curious what I created?
+            </p>
+            <a href="#after effects" class="card--button">View more</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Blender -->
+        <div class="card Moodboard">
+          <div class="card--image-container">
+            <img src={`${base}images/blender_project.png`} alt="Moodboard" />
+          </div>
+          <div class="card--content">
+            <h2>3D & animation</h2>
+            <p>
+              I created a 3D scene for McDonald’s, a promo for a new Happy Meal
+              toy. I did the 3D scene and the animation in Blender. Curious what
+              I created?
+            </p>
+            <a href="#blender" class="card--button">View more</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Styleboard -->
+        <div class="card Styleboard">
+          <div class="card--image-container">
+            <img src={`${base}images/Comming-soon.png`} alt="Styleboard" />
+          </div>
+          <div class="card--content">
+            <h2>New project</h2>
+            <p>
+              I want to explore the world of Blender even more, that’s why I’m
+              working on another project. Stay tuned!
+            </p>
+            <a class="card--button">Stay tuned</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="strip--introduce">
+        <div class="strip-inner--introduce">
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+
+          <!-- Herhaling -->
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+        </div>
+      </div>
+
+      <section class="moodboard-section" id="after effects">
+        <div class="moodboard-content">
+          <div class="moodboard-texts">
+            <h3>After <br /> Effects</h3>
+            <p class="hashtag">#Motion</p>
+            <div class="moodboard-description">
+              <p>
+                For this assignment, I had to create an animation video for a
+                Kickstarter project. I chose the Cat Basket, a cozy and smart
+                space designed for cats. I picked this concept because I
+                genuinely liked the idea, it’s something I would actually
+                sponser myself.
+              </p>
+              <p>
+                For the animation, I used Illustrator for the illustrations and
+                After Effects for the motion. I really enjoyed this project
+                because I love figuring out how movement can make visuals not
+                only look appealing but also communicate a message effortlessly.
+              </p>
+            </div>
+          </div>
+          <div class="moodboard-image">
+            <video width="805" controls muted loop>
+              <source src={`${base}videos/animation.mp4`} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="moodboard-section" id="blender">
+        <div class="moodboard-content">
+          <div class="moodboard-texts">
+            <h3>Blender</h3>
+            <p class="hashtag">#3D&Motion</p>
+            <div class="moodboard-description">
+              <p>
+                For this assignment, I had to create a Blender scene with some
+                motion in it. We could choose any brand, and I went with
+                McDonald’s. I picked it because its playful, fun, and colorful
+                vibe matched perfectly with Blender’s look and feel.
+              </p>
+              <p>
+                This was my first time working in Blender, and I absolutely
+                loved it. I was amazed by how you can build such detailed,
+                dynamic scenes starting from something as simple as a cube. I
+                really enjoyed every part of this project and I’m super proud of
+                the final result.
+              </p>
+            </div>
+          </div>
+          <div class="moodboard-image">
+            <video width="804" height="557" controls muted loop>
+              <source src={`${base}videos/blender_vid.mp4`} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <div class="strip--work">
+        <div class="strip-inner--work">
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+
+          <!-- Herhaling -->
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+          <span class="repeat">Let's work together</span>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>
+
+<script>
+  import { typingDesignPage } from "../scripts/gsap.js";
+  typingDesignPage();
+</script>

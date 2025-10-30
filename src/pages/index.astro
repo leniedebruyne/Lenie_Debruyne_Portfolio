@@ -3,7 +3,6 @@
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/styles.css";
-
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -41,15 +40,9 @@ const base = import.meta.env.BASE_URL;
       <!-- Hero -->
       <section class="hero">
         <div class="badges">
-          <a href={`${base}design#animation`} class="badge motion"
-            >motion designer</a
-          >
-          <a href={`${base}ux`} class="badge-link">
-            <span class="badge ux">ux designer</span>
-          </a>
-          <a href={`${base}design`} class="badge-link">
-            <span class="badge visual">visual designer</span>
-          </a>
+          <a href={`${base}motion`} class="badge motion">motion designer</a>
+          <a href={`${base}ux`} class="badge ux">ux designer</a>
+          <a href={`${base}design`} class="badge visual">visual designer</a>
         </div>
         <h1 class="hero-title desktop-title">
           <img src={`${base}images/Header-P.svg`} alt="P" class="p-tail" />
@@ -100,7 +93,7 @@ const base = import.meta.env.BASE_URL;
             >
           </p>
           <p>
-            I am in my 2nd year Digital Design and Development, where I learned
+            I am in my 3th year Digital Design and Development, where I learned
             how to <b>
               turn my creativity into functional and visually strong digital
               products
@@ -113,7 +106,7 @@ const base = import.meta.env.BASE_URL;
           <h4 class="about--interests">My interests</h4>
           <div class="tags">
             <span class="highlight">Digital products</span>
-            <span>Photography</span>
+            <span>Animals</span>
             <span>Art</span>
           </div>
         </div>
@@ -244,11 +237,9 @@ const base = import.meta.env.BASE_URL;
         <section class="welcome">
           <h3>Hey, welcome to my portfolio!</h3>
           <p>
-            I am Lenie Debruyne and I obtained a bachelor's degree in <b>
-              Digital Design and Development</b
-            >. From a young age my head was <b> full of creative ideas</b>, I
-            was always making things, designing and experimenting. I wanted to
-            use that creativity later <b> to help people </b>.
+            In this portfolio, you’ll find some of my school projects. They’re
+            part of my learning journey and show how I keep growing and
+            redefining my style.
           </p>
         </section>
       </div>
@@ -268,30 +259,92 @@ const base = import.meta.env.BASE_URL;
         </div>
       </section>
 
-      <!-- Moodboard -->
-      <section class="moodboard-section">
-        <div class="moodboard-content">
-          <div class="moodboard-texts">
-            <h3>Mood <br /> board</h3>
-            <p class="hashtag">#SettingTheVibe</p>
-            <div class="moodboard-description">
-              <p>I created a mood board for a new skincare brand.</p>
-              <p>
-                It was designed to set the perfect mood where the viewer feels
-                relaxed and luxurious.
-              </p>
+      <div class="scroll-wrapper">
+        <!-- Left arrow -->
+        <button class="scroll-btn left" aria-label="Scroll left">←</button>
+
+        <!-- Scrollable content -->
+        <div class="horizontal-scroll">
+          <!-- Moodboard -->
+          <section class="moodboard-section">
+            <div class="moodboard-content">
+              <div class="moodboard-texts">
+                <h3>Mood <br /> board</h3>
+                <p class="hashtag">#SettingTheVibe</p>
+                <div class="moodboard-description">
+                  <p>I created a mood board for a new skincare brand.</p>
+                  <p>
+                    It was designed to set the perfect mood where the viewer
+                    feels relaxed and luxurious.
+                  </p>
+                </div>
+              </div>
+              <div class="moodboard-image">
+                <img
+                  src={`${base}images/moodboard.png`}
+                  alt="Moodboard"
+                  width="804"
+                  height="557"
+                />
+              </div>
             </div>
-          </div>
-          <div class="moodboard-image">
-            <img
-              src={`${base}images/moodboard.png`}
-              alt="Moodboard"
-              width="804"
-              height="557"
-            />
-          </div>
+          </section>
+
+          <!-- Blender -->
+          <section class="moodboard-section">
+            <div class="moodboard-content">
+              <div class="moodboard-texts">
+                <h3>Blender</h3>
+                <p class="hashtag">#3D</p>
+                <div class="moodboard-description">
+                  <p>I created a 3D animation for a brand of my choice.</p>
+                  <p>
+                    I went with McDonald’s and made a concept for a new Happy
+                    Meal toy. It was my first experience using Blender.
+                  </p>
+                </div>
+              </div>
+              <div class="moodboard-image">
+                <video width="804" height="557" controls muted loop>
+                  <source
+                    src={`${base}videos/blender_vid.mp4`}
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </section>
+
+          <!-- Umwelt -->
+          <section class="moodboard-section">
+            <div class="moodboard-content">
+              <div class="moodboard-texts">
+                <h3>Umwelt</h3>
+                <p class="hashtag">#MoreThanHuman</p>
+                <div class="moodboard-description">
+                  <p>For this assignment, I explored the concept of umwelt.</p>
+                  <p>
+                    I chose to research crows, and with what I learned, I
+                    created a project that benefits both humans and crows.
+                  </p>
+                </div>
+              </div>
+              <div class="moodboard-image">
+                <img
+                  src={`${base}images/umwelt.png`}
+                  alt="Umwelt Project"
+                  width="804"
+                  height="557"
+                />
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+
+        <!-- Right arrow -->
+        <button class="scroll-btn right" aria-label="Scroll right">→</button>
+      </div>
 
       <div class="strip--work">
         <div class="strip-inner--work">
@@ -315,23 +368,46 @@ const base = import.meta.env.BASE_URL;
           <span class="repeat">Let's work together</span>
         </div>
       </div>
+
+      <!-- Footer -->
+      <Footer />
     </div>
 
-    <!-- Footer -->
-    <Footer />
+    <!-- inline script om de functie uit te voeren -->
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        scrollButtons();
+      });
+    </script>
   </body>
+
+  <script>
+    const scrollContainer = document.querySelector(".horizontal-scroll");
+    const btnLeft = document.querySelector(".scroll-btn.left");
+    const btnRight = document.querySelector(".scroll-btn.right");
+
+    const scrollAmount = window.innerWidth * 0.8;
+
+    if (scrollContainer && btnLeft && btnRight) {
+      btnLeft.addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      btnRight.addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+    }
+
+    import { wiggleBadges } from "../scripts/gsap.js";
+    wiggleBadges();
+
+    import { slideInPhoto } from "../scripts/gsap.js";
+    slideInPhoto();
+
+    import { typingTitle } from "../scripts/gsap.js";
+    typingTitle();
+
+    import { pulse2025 } from "../scripts/gsap.js";
+    pulse2025();
+  </script>
 </html>
-
-<script>
-  import { wiggleBadges } from "../scripts/gsap.js";
-  wiggleBadges();
-
-  import { slideInPhoto } from "../scripts/gsap.js";
-  slideInPhoto();
-
-  import { typingTitle } from "../scripts/gsap.js";
-  typingTitle();
-
-  import { pulse2025 } from "../scripts/gsap.js";
-  pulse2025();
-</script>

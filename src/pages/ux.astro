@@ -89,8 +89,24 @@ const base = import.meta.env.BASE_URL;
       </section>
 
       <!-- work carousel -->
-      <section class="work--carousel">
-        <!-- Card 1: Agency Monkeyshot -->
+      <section class="work--carousel start-left">
+        <!-- Card 1: Umwelt -->
+        <div class="card brandboard">
+          <div class="card--image-container">
+            <img src={`${base}images/umwelt.png`} alt="Umwelt" />
+          </div>
+          <div class="card--content">
+            <h2>Umwelt</h2>
+            <p>
+              For this assignment, I explored the concept of umwelt. I chose to
+              research crows, and with what I learned, I created a project that
+              benefits both humans and crows.
+            </p>
+            <a href="#umwelt" class="card--button">View more</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Agency Monkeyshot -->
         <div class="card brandboard">
           <div class="card--image-container">
             <img src={`${base}images/Monkeyshot.png`} alt="Monkeyshot" />
@@ -102,11 +118,13 @@ const base = import.meta.env.BASE_URL;
               based on user research with Atlas. Curious how I turned insights
               into a human-centered solution?
             </p>
-            <a href="#diamond" class="card--button">View more</a>
+            <a href="#monkeyshot" href="#diamond" class="card--button"
+              >View more</a
+            >
           </div>
         </div>
 
-        <!-- Card 2:Intesellar Starship -->
+        <!-- Card 3:Intesellar Starship -->
         <div class="card Moodboard">
           <div class="card--image-container">
             <img src={`${base}images/Starship.png`} alt="Starship" />
@@ -118,11 +136,13 @@ const base = import.meta.env.BASE_URL;
               starship, blending digital and physical elements to support
               well-being. Curious how it turned out?
             </p>
-            <a href="#diamond" class="card--button">View more</a>
+            <a href="#starship" href="#diamond" class="card--button"
+              >View more</a
+            >
           </div>
         </div>
 
-        <!-- Card 3: / -->
+        <!-- Card 4: / -->
         <div class="card Styleboard">
           <div class="card--image-container">
             <img src={`${base}images/Comming-soon.png`} alt="Styleboard" />
@@ -134,39 +154,34 @@ const base = import.meta.env.BASE_URL;
               showcase my passion projects and personal design explorations,
               where I can push the boundaries of creativity and innovation.
             </p>
-            <a href="#passion" class="card--button">View more</a>
+            <a  href="#passion" class="card--button"
+              >Stay tuned</a
+            >
           </div>
         </div>
       </section>
 
       <div class="strip--introduce">
         <div class="strip-inner--introduce">
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
 
           <!-- Herhaling -->
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
-          <span class="repeat">Let me introduce myself</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
+          <span class="repeat">Let me show you some of my work</span>
         </div>
-      </div>
-
-      <!-- Navigation -->
-      <div class="design--navigation" id="passion">
-        <a href="#passion" class="active">Passion</a>
-        <a href="#diamond">Dubble diamond</a>
-        <a href="#favourite">My favourite</a>
       </div>
 
       <!-- Coming Soon -->
@@ -180,12 +195,7 @@ const base = import.meta.env.BASE_URL;
         </div>
       </section>
 
-      <!-- Navigation -->
-      <div class="design--navigation" id="diamond">
-        <a href="#passion">Passion</a>
-        <a href="#diamond" class="active">Dubble diamond</a>
-        <a href="#favourite">My favourite</a>
-      </div>
+      <h2 class="double_diamond--title">Double diamond</h2>
 
       <section class="dubble-diamond">
         <div class="dubble-diamond--text">
@@ -228,7 +238,7 @@ const base = import.meta.env.BASE_URL;
 
       <section class="work--carousel">
         <!-- Card 1: Agency Monkeyshot -->
-        <div class="card brandboard">
+        <div class="card brandboard" id="monkeyshot">
           <div class="card--image-container">
             <img src={`${base}images/Monkeyshot.png`} alt="Monkeyshot" />
           </div>
@@ -256,7 +266,7 @@ const base = import.meta.env.BASE_URL;
         </div>
 
         <!-- Card 2:Intesellar Starship -->
-        <div class="card Moodboard">
+        <div class="card Moodboard" id="starship">
           <div class="card--image-container">
             <img src={`${base}images/Starship.png`} alt="Starship" />
           </div>
@@ -284,39 +294,66 @@ const base = import.meta.env.BASE_URL;
         </div>
       </section>
 
-      <!-- Navigation -->
-      <div class="design--navigation" id="favourite">
-        <a href="#passion">Passion</a>
-        <a href="#diamond">Dubble diamond</a>
-        <a href="#favourite" class="active">My favourite</a>
-      </div>
+      <h2 class="umwelt--title">Umwelt</h2>
 
-      <section class="moodboard-section">
-        <div class="moodboard-content">
-          <div class="moodboard-texts">
-            <h3>Story <br /> telling</h3>
-            <p class="hashtag">#StoryDriven</p>
-            <div class="moodboard-description">
-              <p>
-                For the Interstellar Starship assignment, I tackled the crucial
-                challenge of supporting the crew's mental well-being during long
-                voyages. My approach focused on the small, yet significant,
-                moments in daily life.
-              </p>
-              <p>
-                To effectively communicate and validate this concept, I
-                developed a storyboard. This visual storytelling method proved
-                invaluable, helping my test participants connect emotionally
-                with the solution and truly envision its impact on their lives.
-              </p>
-            </div>
+      <section class="dubble-diamond">
+        <div class="dubble-diamond--text" id="umwelt">
+          <p>
+            In my third year of the <b>Experience Design</b> course, I worked with
+            the idea of the umwelt.
+          </p>
+
+          <p>
+            I dived into <b> more-than-human design</b>, also called the <b
+              >umwelt</b
+            >. It was super interesting to <b>explore</b> this perspective, as it
+            pushes you to <b>think beyond</b> what we usually know.
+          </p>
+
+          <p>
+            For this assignment, I chose to focus on the <b>crow</b>. I
+            <b>researched</b> everything I could about them, using a variety of methods
+            to really understand their world. With this knowledge, I <b
+              >designed</b
+            >a more-than-human project that reflects the crow’s perspective.
+          </p>
+
+          <p>
+            Interested in the full journey? Click "Take a look" to visit the
+            Behance page, where the <b>complete process is documented</b> in detail.
+          </p>
+        </div>
+
+        <div class="dubble-diamond--projects"></div>
+      </section>
+
+      <section class="work--carousel">
+        <!-- Card 1: umwelt -->
+        <div class="card brandboard">
+          <div class="card--image-container">
+            <img src={`${base}images/umwelt.png`} alt="umwelt" />
           </div>
-          <div class="moodboard-image">
-            <img
-              src={`${base}images/Story-telling.png`}
-              alt="Brandboard"
-              width="805"
-            />
+          <div class="card--content">
+            <h2>Umwelt</h2>
+            <p>
+              For this project, I explored more-than-human design, the idea that
+              animals experience the world differently than we do. Humans
+              constantly create inventions to make life easier for ourselves,
+              but we often don’t consider the impact these have on the animals
+              around us. This assignment was incredibly interesting, as it
+              opened my mind to designing not just for humans, but for the world
+              around us as well. For the project, I focused on the crow. After
+              extensive research, I developed a more-than-human design that
+              reflects its perspective.
+            </p>
+            <a
+              href="https://www.behance.net/gallery/237192625/Umwelt-assignment"
+              class="card--button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View more
+            </a>
           </div>
         </div>
       </section>

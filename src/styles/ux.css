@@ -41,6 +41,21 @@ body {
     background-color: var(--c-beige);
 }
 
+.double_diamond--title{
+    font-family: var(--font-title);
+    font-size: 75px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.umwelt--title {
+    font-family: var(--font-title);
+    font-size: 75px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 10rem;
+}
+
 a {
     text-decoration: none;
 }
@@ -56,6 +71,12 @@ footer {
 .footer-text {
     color: var(--c-beige);
     font-size: 25px;
+}
+
+.footer-text a {
+    color: var(--c-beige);
+    text-decoration: none;
+
 }
 
 .footer-banner {
@@ -77,6 +98,12 @@ footer {
     width: 100%;
     height: 12rem;
     gap: 2rem;
+}
+
+.footer-text img[alt="LinkedIn icoon"],
+.footer-text img[alt="Behance icoon"] {
+    position: relative;
+    top: 5px;
 }
 
 
@@ -234,16 +261,35 @@ footer {
 
 .work--carousel {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    padding: 50px 20px;
-    background-color: var(--c-beige);
-
+    overflow-x: auto;
+    gap: 150px;
+    padding: 50px 40px;
     margin-top: -7rem;
+    margin-bottom: 4rem;
+    background-color: var(--c-beige);
+    scroll-snap-type: x mandatory;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
+.work--carousel.start-left {
+    justify-content: flex-start;
+    scroll-padding-left: 60px;
+}
+
+.work--carousel:not(.start-left) {
+    justify-content: center;
+    /* deze carrousels blijven gecentreerd */
+    scroll-padding-left: 0;
+}
+
+
+
 .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
     border: 2px solid var(--c-dark-green);
     border-radius: 20px;
     overflow: hidden;
@@ -513,7 +559,7 @@ footer {
 
 .dubble-diamond--text{
     max-width: 750px;
-    margin-top: 2rem;
+    margin-top: -2rem;
     margin-bottom: 7rem;
 }
 
