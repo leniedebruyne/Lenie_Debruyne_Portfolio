@@ -690,6 +690,20 @@ footer {
         max-width: 100%;
     }
 
+        .moodboard-image video {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 0 auto;
+            object-fit: contain;
+            box-sizing: border-box;
+        }
+
+         .moodboard-image video {
+             max-width: 100%;
+         }
+
     /* =====Banner ===== */
     .strip--introduce,
     .strip--work {

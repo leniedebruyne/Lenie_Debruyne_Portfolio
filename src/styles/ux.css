@@ -362,6 +362,15 @@ footer {
     transform: translateY(-2px);
 }
 
+.work--carousel {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    width: 100%;
+}
+
 .strip--introduce {
     background-color: var(--c-dark-green);
     color: var(--c-beige);
