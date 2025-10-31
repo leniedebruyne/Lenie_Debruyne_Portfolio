@@ -618,6 +618,8 @@ footer {
         letter-spacing: 0;
         -webkit-text-fill-color: var(--c-dark-green);
         -webkit-text-stroke: 0;
+        margin-left: 4.5rem;
+        margin-top: 1rem;
     }
 
     /*word 'designer' */
@@ -629,16 +631,18 @@ footer {
         letter-spacing: 0.01em;
         -webkit-text-fill-color: var(--c-pink);
         -webkit-text-stroke: 0;
+        margin-left: -4rem;
+        
     }
 
     /* word 'portfolio' */
     .design--header-title .portfolio-word {
-        margin-top: -50px;
         font-size: clamp(3rem, 12vw, 5rem);
         -webkit-text-stroke: 1px var(--c-dark-green);
         -webkit-text-fill-color: transparent;
         color: var(--c-dark-green);
         font-weight: 400;
+        margin-top: -2rem;
     }
 
     /* word 'portfolio' -> l */
@@ -659,7 +663,7 @@ footer {
 
     /* ===== intro text ===== */
     .design--header-text {
-        margin-top: -0.5rem;
+        margin-top: 2rem;
         margin-bottom: 5rem;
     }
 

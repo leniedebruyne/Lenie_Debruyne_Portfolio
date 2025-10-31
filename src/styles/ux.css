@@ -362,14 +362,6 @@ footer {
     transform: translateY(-2px);
 }
 
-.work--carousel {
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.card {
-    width: 100%;
-}
 
 .strip--introduce {
     background-color: var(--c-dark-green);
@@ -711,17 +703,19 @@ footer {
         letter-spacing: 0;
         -webkit-text-fill-color: var(--c-dark-green);
         -webkit-text-stroke: 0;
+                margin-left: 0.5rem;
+                    margin-top: 1rem;
     }
 
     /*word 'designer' */
     .design--header-title .designer-word {
-        margin-left: -15px;
         font-size: clamp(4rem, 15vw, 6.5rem);
         color: var(--c-pink);
         font-weight: 500;
         letter-spacing: 0.01em;
         -webkit-text-fill-color: var(--c-pink);
         -webkit-text-stroke: 0;
+                margin-left: -1.5rem;
     }
 
     /* word 'portfolio' */
@@ -732,6 +726,8 @@ footer {
         -webkit-text-fill-color: transparent;
         color: var(--c-dark-green);
         font-weight: 400;
+        margin-top: -2rem;
+        margin-left: 0.5rem;
     }
 
     /* word 'portfolio' -> l */
@@ -749,7 +745,7 @@ footer {
 
     /* ===== intro text ===== */
     .design--header-text {
-        margin-top: -0.5rem;
+        margin-top: 2rem;
         margin-bottom: 5rem;
     }
 
@@ -780,6 +776,41 @@ footer {
 
 
     /* ===== Moodboard ===== */
+
+
+.work--carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 7rem;
+    padding: 2rem 1rem;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 350px;
+    scroll-snap-align: start;
+}
+
+#project-pair {
+    flex-direction: column;
+    gap: 2rem;
+    overflow-x: unset;
+    padding: 2rem 1rem;
+}
+
+#project-pair .card {
+    width: 100%;
+    max-width: 80%;
+    box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+
+
     .moodboard-section {
         padding: 4rem 1rem;
     }
