@@ -156,7 +156,7 @@ p {
 
 
 .badge.ux {
-        text-decoration: none;
+    text-decoration: none;
     position: absolute;
     top: 0;
     background-color: var(--c-dark-green);
@@ -180,8 +180,8 @@ p {
 
 
 .badge.visual {
-        text-decoration: none;
-        color: var(--c-dark-green);
+    text-decoration: none;
+    color: var(--c-dark-green);
     position: absolute;
     top: 0;
     background-color: var(--c-pink);
@@ -465,6 +465,64 @@ p {
     margin-bottom: 10rem;
 }
 
+.personal-project {
+    max-width: 1200px;
+    margin: 0 auto 8rem;
+    padding: 4rem 2rem;
+    border-top: 2px solid var(--c-dark-green);
+    border-bottom: 2px solid var(--c-dark-green);
+    text-align: center;
+}
+
+.personal-project--tittle {
+    font-family: var(--font-title);
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 0 1.5rem;
+}
+
+.personal-project p {
+    max-width: 760px;
+    margin: 0 auto 1rem;
+}
+
+.personal-project-link {
+    display: inline-block;
+    margin: 1.5rem 0 2.5rem;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--c-dark-green);
+    color: var(--c-beige);
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid var(--c-dark-green);
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.personal-project-link:hover,
+.personal-project-link:focus-visible {
+    background-color: transparent;
+    color: var(--c-dark-green);
+    outline: none;
+}
+
+.personal-project-media {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.personal-project-media img,
+.personal-project-media video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid rgba(29, 43, 26, 0.2);
+}
+
 
 .coming-soon {
     background-color: var(--c-dark-green);
@@ -572,7 +630,7 @@ p {
 
 .moodboard-section {
     flex: 0 0 100vw;
-        scroll-snap-align: start;
+    scroll-snap-align: start;
     display: flex;
     justify-content: center;
     padding: 10rem 2rem;
@@ -704,7 +762,7 @@ footer {
 .footer-text {
     color: var(--c-beige);
     font-size: 25px;
-        text-decoration: none;
+    text-decoration: none;
 
 }
 
@@ -865,14 +923,14 @@ footer {
         width: 100%;
     }
 
-.skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 0.5rem;
-}
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
 
     .skill img {
         width: 40px;
@@ -881,10 +939,10 @@ footer {
 
     .skill>div {
         display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0rem;
-            margin-bottom: 2rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0rem;
+        margin-bottom: 2rem;
     }
 
 
@@ -892,7 +950,7 @@ footer {
         max-width: 60%;
         height: auto;
         display: block;
-        margin: 0 auto;     
+        margin: 0 auto;
     }
 
 
@@ -1013,49 +1071,73 @@ footer {
         height: auto;
     }
 
+    .personal-project {
+        margin: 0 auto 4rem;
+        padding: 2.5rem 1rem;
+    }
 
-/* =====Carousel ===== */
-.scroll-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 0rem;
-}
+    .personal-project--tittle {
+        font-size: 3rem;
+    }
+
+    .personal-project-link {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .personal-project-media {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .personal-project-media img,
+    .personal-project-media video {
+        max-width: 100% !important;
+    }
+
+
+    /* =====Carousel ===== */
+    .scroll-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 0rem;
+    }
 
 
 
 
 
- .horizontal-scroll {
-     display: block;
-     overflow-x: unset;
-     scroll-snap-type: unset;
-     white-space: normal;
- }
+    .horizontal-scroll {
+        display: block;
+        overflow-x: unset;
+        scroll-snap-type: unset;
+        white-space: normal;
+    }
 
- .moodboard-section {
-     min-width: unset;
-     width: 100%;
-     margin-bottom: 1rem;
- }
+    .moodboard-section {
+        min-width: unset;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 
- .moodboard-image video {
-     display: block;
-     width: 100%;
-     max-width: 500px;
-     height: auto;
-     margin: 0 auto;
-     object-fit: cover;
- }
+    .moodboard-image video {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+        object-fit: cover;
+    }
 
- .moodboard-image img,
- .moodboard-image video {
-     max-width: 100%;
- }
+    .moodboard-image img,
+    .moodboard-image video {
+        max-width: 100%;
+    }
 
- .scroll-btn {
-     display: none;
-     /* verberg pijltjes op mobiel */
- }
+    .scroll-btn {
+        display: none;
+        /* verberg pijltjes op mobiel */
+    }
 
 
 
@@ -1186,6 +1268,14 @@ footer {
         position: static;
         margin: 2rem 0 1rem;
         text-align: center;
+    }
+
+    .personal-project {
+        margin-bottom: 6rem;
+    }
+
+    .personal-project-media {
+        grid-template-columns: 1fr;
     }
 
     .skills-education::before {
