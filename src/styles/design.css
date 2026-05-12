@@ -112,16 +112,7 @@ footer {
     display: block;
 }
 
-.design--header-title::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 6px;
-    background: var(--c-light-green);
-    margin: 1.25rem auto 0;
-    border-radius: 4px;
-    opacity: 0.95;
-}
+
 
 /* Base styles for all title spans (outline effect) */
 .design--header-title span {
@@ -191,7 +182,7 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    margin-top: 6rem;
+    margin-top: 10rem;
     padding: 18px 20px;
     color: rgba(29, 43, 26, 0.95);
 }
