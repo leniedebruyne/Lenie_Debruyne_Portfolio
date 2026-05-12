@@ -41,7 +41,7 @@ body {
     background-color: var(--c-beige);
 }
 
-.double_diamond--title{
+.double_diamond--title {
     font-family: var(--font-title);
     font-size: 75px;
     font-weight: 300;
@@ -205,6 +205,8 @@ footer {
     margin-left: 75px;
     margin-top: -200px;
     margin-bottom: 50px;
+    z-index: 50;
+    /* ensure cat sits above the carousel */
 }
 
 .design--header-cat-wrapper img {
@@ -264,10 +266,13 @@ footer {
     overflow-x: auto;
     gap: 150px;
     padding: 50px 40px;
-    margin-top: -7rem;
+    margin-top: calc(-7rem - 50px);
     margin-bottom: 4rem;
     background-color: var(--c-beige);
     scroll-snap-type: x mandatory;
+    position: relative;
+    z-index: 0;
+    /* ensure carousel is below header accents */
 
     /* hide scrollbar */
     scrollbar-width: none;
@@ -298,6 +303,7 @@ footer {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 0;
 }
 
 .card:hover {
@@ -328,7 +334,7 @@ footer {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    background-color: var(--c-beige);
+    background-color: #ffffff;
 }
 
 .card--content h2 {
@@ -353,11 +359,32 @@ footer {
     font-size: 1em;
     cursor: pointer;
     align-self: flex-start;
+    display: inline-block;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card--button:hover {
+    background-color: var(--c-light-green);
+    transform: translateY(-2px);
+}
+
+/* buttons used inside the new small project cards in the grid */
+.mini-card-button {
+    background-color: var(--c-dark-green);
+    color: var(--c-beige);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem !important;
+    /* ensure spacing for these mini cards */
+}
+
+.mini-card-button:hover {
     background-color: var(--c-light-green);
     transform: translateY(-2px);
 }
@@ -553,12 +580,12 @@ footer {
     width: 100%;
 }
 
-.dubble-diamond{
+.dubble-diamond {
     display: flex;
     justify-content: center;
 }
 
-.dubble-diamond--text{
+.dubble-diamond--text {
     max-width: 750px;
     margin-top: -2rem;
     margin-bottom: 7rem;
@@ -607,6 +634,130 @@ footer {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+/* ===== Enhanced section styling (below the strip) ===== */
+.dubble-diamond,
+.moodboard-section,
+.work--carousel+.strip--work,
+.coming-soon {
+    position: relative;
+}
+
+/* subtle angled background to match home vibe */
+.dubble-diamond {
+    background: transparent;
+    padding: 4rem 2rem;
+    border-top: none;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    /* place intro above the projects so copy can breathe */
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.dubble-diamond--text {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 2.5rem 2.25rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transform: translateY(-10px);
+    max-width: 820px;
+    /* center and allow breathing room */
+    text-align: center;
+    margin: 0;
+}
+
+/* create a two-column project grid on larger screens */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.moodboard-section {
+    padding: 8rem 2rem;
+}
+
+.moodboard-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #ffffff;
+    /* higher contrast than beige background */
+    padding: 1.25rem;
+    border-radius: 14px;
+    border: 1px solid rgba(29, 43, 26, 0.06);
+    min-height: 340px;
+    /* keep project cards visually even */
+}
+
+.moodboard-texts h3 {
+    font-size: clamp(2.5rem, 4.5vw, 5.5rem);
+    line-height: 1.05;
+}
+
+.moodboard-image img,
+.moodboard-image video {
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transform: rotate(-0.6deg);
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* equal column sizing inside grid items */
+.projects-grid .moodboard-content .moodboard-texts {
+    flex: 1 1 48%;
+}
+
+.projects-grid .moodboard-content .moodboard-image {
+    flex: 1 1 52%;
+    max-width: 520px;
+}
+
+/* more breathing room between paragraph and button for mini project cards */
+.moodboard-description .mini-card-button,
+.moodboard-description a.mini-card-button {
+    display: inline-block;
+    margin-top: 1.5rem !important;
+}
+
+
+
+/* strip separator animation—make strips slightly taller on large screens */
+.strip--introduce,
+.strip--work {
+    padding: 0.75rem 0;
+}
+
+/* ===== Larger than laptop adjustments ===== */
+@media (min-width: 1201px) {
+    .moodboard-section {
+        padding: 10rem 3rem;
+    }
+
+    .moodboard-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .dubble-diamond--text {
+        transform: translateY(-60px);
+        padding: 3.5rem;
+    }
+
+    .work--carousel {
+        gap: 80px;
+        padding: 6rem 80px;
+    }
 }
 
 /* ===== MOBILE FIRST ===== */
@@ -703,8 +854,8 @@ footer {
         letter-spacing: 0;
         -webkit-text-fill-color: var(--c-dark-green);
         -webkit-text-stroke: 0;
-                margin-left: 0.5rem;
-                    margin-top: 1rem;
+        margin-left: 0.5rem;
+        margin-top: 1rem;
     }
 
     /*word 'designer' */
@@ -715,7 +866,7 @@ footer {
         letter-spacing: 0.01em;
         -webkit-text-fill-color: var(--c-pink);
         -webkit-text-stroke: 0;
-                margin-left: -1.5rem;
+        margin-left: -1.5rem;
     }
 
     /* word 'portfolio' */
@@ -778,36 +929,36 @@ footer {
     /* ===== Moodboard ===== */
 
 
-.work--carousel {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 7rem;
-    padding: 2rem 1rem;
-    scroll-snap-type: x mandatory;
-}
+    .work--carousel {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 7rem;
+        padding: 2rem 1rem;
+        scroll-snap-type: x mandatory;
+    }
 
-.card {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 350px;
-    scroll-snap-align: start;
-}
+    .card {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 350px;
+        scroll-snap-align: start;
+    }
 
-#project-pair {
-    flex-direction: column;
-    gap: 2rem;
-    overflow-x: unset;
-    padding: 2rem 1rem;
-}
+    #project-pair {
+        flex-direction: column;
+        gap: 2rem;
+        overflow-x: unset;
+        padding: 2rem 1rem;
+    }
 
-#project-pair .card {
-    width: 100%;
-    max-width: 80%;
-    box-sizing: border-box;
+    #project-pair .card {
+        width: 100%;
+        max-width: 80%;
+        box-sizing: border-box;
         margin-left: auto;
         margin-right: auto;
-}
+    }
 
 
 
@@ -890,10 +1041,17 @@ footer {
         max-width: 80%;
     }
 
-        /* =====Banner ===== */
-        .strip--introduce,
-        .strip--work {
-            display: none;    }
+    /* =====Banner ===== */
+    .strip--introduce,
+    .strip--work {
+        display: none;
+    }
+
+    /* Stack projects in a single column on small screens */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
 }
 
@@ -992,19 +1150,19 @@ footer {
     }
 
 
- .design--navigation a {
-    font-size: 25px;
- }
+    .design--navigation a {
+        font-size: 25px;
+    }
 
- .moodboard-image {
-     width: 90%;
-     max-width: 400px;
- }
+    .moodboard-image {
+        width: 90%;
+        max-width: 400px;
+    }
 
- .moodboard-image img {
-     width: 100%;
-     height: auto;
- }
+    .moodboard-image img {
+        width: 100%;
+        height: auto;
+    }
 
 }
 
