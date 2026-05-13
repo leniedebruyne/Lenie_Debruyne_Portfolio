@@ -155,7 +155,6 @@ export const animateProjectPage = () => {
   animateProjectPageText();
   animateProjectPageSections();
   animateProjectPageCallout();
-  typingDesignPage();
 };
 
 export const animateDesignPage = () => {
@@ -168,7 +167,6 @@ export const animateDesignPage = () => {
     overlap: -0.2,
   });
   animateProjectPageCallout();
-  typingDesignPage();
 };
 
 export const animateMotionPage = () => {
@@ -280,27 +278,3 @@ export const pulse2025 = () => {
   });
 };
 
-export const typingDesignPage = (selector = ".design--header-cat-bubble p") => {
-  const textEl = document.querySelector(selector);
-  if (!textEl) return;
-  const fullText = textEl.textContent;
-  textEl.textContent = "";
-
-  if (prefersReducedMotion) {
-    textEl.textContent = fullText;
-    return;
-  }
-
-  ScrollTrigger.create({
-    trigger: ".design--header-cat-wrapper",
-    start: "top 80%",
-    once: true,
-    onEnter: () => {
-      gsap.to(textEl, {
-        duration: 2,
-        text: fullText,
-        ease: "none",
-      });
-    },
-  });
-};
