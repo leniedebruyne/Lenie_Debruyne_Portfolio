@@ -511,96 +511,77 @@ footer {
     }
 
 
-/* ===== Moodboard ===== */
-.moodboard-section {
-    padding: 4rem 1rem;
-}
-
-.moodboard-content {
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    width: 100%;
-    max-width: none;
-}
-
-.moodboard-texts {
-    text-align: center;
-    align-items: center;
-}
-
-.moodboard-texts h3 {
-    font-size: 3rem;
-    line-height: 1.1;
-}
-
-.moodboard-texts .hashtag {
-    font-size: 1rem;
-}
-
-.moodboard-description p {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.9rem;
-}
-
-.moodboard-image {
-    width: 90%;
-    max-width: 400px;
-}
-
-.moodboard-image img {
-    width: 100%;
-    height: auto;
-}
-
-/* ===== Header ===== */
-
-/* Reset the main container (h1) */
-.design--header-title {
-    height: auto;
-    min-height: 200px;
-    margin: 30px auto 0 auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .design--header-title {
-        margin-top: 2.5rem;
-        gap: 0.25rem;
+    /* ===== Moodboard ===== */
+    .moodboard-section {
+        padding: 4rem 1rem;
     }
 
-    .design--header-title-words {
-        gap: 0.3rem;
+    .moodboard-content {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        width: 100%;
+        max-width: none;
     }
 
-    .design--header-title .visual-word {
-        margin-bottom: 0.6rem;
-    }
-
-    /* ===== Cat ===== */
-    .design--header-cat-wrapper {
-        display: none;
-    }
-
-    /* ===== intro text ===== */
-    .design--header-text {
-        margin-top: 2.5rem;
-        padding-top: 3rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+    .moodboard-texts {
+        text-align: center;
         align-items: center;
     }
 
-    .design--navigation a {
-        width: 100%;
-        max-width: 250px;
-        padding: 10px 0;
-        font-size: 1rem;
-        text-align: center;
+    .moodboard-texts h3 {
+        font-size: 3rem;
+        line-height: 1.1;
     }
+
+    .moodboard-texts .hashtag {
+        font-size: 1rem;
+    }
+
+    .moodboard-description p {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.9rem;
+    }
+
+    .moodboard-image {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .moodboard-image img {
+        width: 100%;
+        height: auto;
+    }
+
+   /* ===== Header ===== */
+
+   .design--header-title {
+       margin-top: 2.5rem;
+       gap: 0.25rem;
+   }
+
+   .design--header-title-words {
+       gap: 0.3rem;
+   }
+
+   .design--header-title .visual-word {
+       margin-bottom: 0.6rem;
+   }
+
+   /* ===== Cat ===== */
+   .design--header-cat-wrapper {
+       display: none;
+   }
+
+   /* ===== intro text ===== */
+   .design--header-text {
+       margin-top: 2.5rem;
+       margin-bottom: 5rem;
+   }
+
+    
 
     /* ===== animation ===== */
     .animation--video {
@@ -628,9 +609,6 @@ footer {
     .strip--work {
         display: none;
     }
-
-
-}
 
 }
 
