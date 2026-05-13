@@ -7,6 +7,157 @@ gsap.registerPlugin(TextPlugin);
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+const revealFromTo = (targets, fromVars, toVars) => {
+  const elements = gsap.utils.toArray(targets);
+  if (!elements.length) return;
+
+  if (prefersReducedMotion) {
+    gsap.set(elements, { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0 });
+    return;
+  }
+
+  gsap.fromTo(elements, fromVars, toVars);
+};
+
+const revealOnScroll = (targets, fromVars, toVars, trigger, start = "top 80%") => {
+  const elements = gsap.utils.toArray(targets);
+  if (!elements.length) return;
+
+  if (prefersReducedMotion) {
+    gsap.set(elements, { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0 });
+    return;
+  }
+
+  gsap.fromTo(elements, fromVars, {
+    ...toVars,
+    scrollTrigger: {
+      trigger,
+      start,
+      once: true,
+    },
+  });
+};
+
+const animateProjectPageTitle = () => {
+  const titleLayers = document.querySelectorAll(".design--header-title span");
+  if (!titleLayers.length) return;
+
+  revealFromTo(
+    titleLayers,
+    { opacity: 0, y: 24, rotate: -2 },
+    {
+      opacity: 1,
+      y: 0,
+      rotate: 0,
+      duration: 0.9,
+      ease: "power3.out",
+      stagger: 0.12,
+    }
+  );
+};
+
+const animateProjectPageText = () => {
+  revealFromTo(
+    ".design--header-text p",
+    { opacity: 0, y: 22 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power2.out",
+      stagger: 0.12,
+      delay: 0.2,
+    }
+  );
+};
+
+
+const animateProjectPageSections = () => {
+  document.querySelectorAll(".moodboard-section").forEach((section) => {
+    const sectionText = section.querySelectorAll(
+      ".moodboard-texts > *, .moodboard-description > *, .moodboard-texts h3, .moodboard-texts .hashtag"
+    );
+    const sectionMedia = section.querySelectorAll(".moodboard-image img, .moodboard-image video");
+
+    if (prefersReducedMotion) {
+      gsap.set(sectionText, { opacity: 1, y: 0 });
+      gsap.set(sectionMedia, { opacity: 1, x: 0, y: 0, scale: 1 });
+      return;
+    }
+
+    const sectionTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top 76%",
+        once: true,
+      },
+    });
+
+    if (sectionText.length) {
+      sectionTimeline.fromTo(
+        sectionText,
+        { opacity: 0, y: 24 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: "power3.out",
+          stagger: 0.1,
+        }
+      );
+    }
+
+    if (sectionMedia.length) {
+      sectionTimeline.fromTo(
+        sectionMedia,
+        { opacity: 0, y: 36, scale: 0.98 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.9,
+          ease: "power3.out",
+        },
+        sectionText.length ? "-=0.35" : 0
+      );
+    }
+  });
+};
+
+const animateProjectPageCallout = () => {
+  document.querySelectorAll(".double_diamond--title, .umwelt--title").forEach((title) => {
+    revealOnScroll(
+      title,
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
+      title
+    );
+  });
+
+  document.querySelectorAll(".dubble-diamond--text").forEach((textBlock) => {
+    revealOnScroll(
+      textBlock.querySelectorAll("p"),
+      { opacity: 0, y: 18 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.75,
+        ease: "power2.out",
+        stagger: 0.12,
+      },
+      textBlock
+    );
+  });
+};
+
+export const animateProjectPage = () => {
+  animateProjectPageTitle();
+  animateProjectPageText();
+  animateProjectPageSections();
+  animateProjectPageCallout();
+  typingDesignPage();
+};
+
 export const wiggleBadges = () => {
   if (prefersReducedMotion) {
     gsap.set(".badge", { rotate: 0 });
@@ -70,7 +221,7 @@ export const typingTitle = () => {
   title.textContent = "";
 
   if (prefersReducedMotion) {
-    title.textContent = fullText; 
+    title.textContent = fullText;
     return;
   }
 
@@ -103,14 +254,14 @@ export const pulse2025 = () => {
   });
 };
 
-export const typingDesignPage = () => {
-  const textEl = document.querySelector(".design--header-cat-bubble p");
+export const typingDesignPage = (selector = ".design--header-cat-bubble p") => {
+  const textEl = document.querySelector(selector);
   if (!textEl) return;
   const fullText = textEl.textContent;
   textEl.textContent = "";
 
   if (prefersReducedMotion) {
-    textEl.textContent = fullText; 
+    textEl.textContent = fullText;
     return;
   }
 
