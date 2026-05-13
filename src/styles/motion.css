@@ -510,8 +510,6 @@ footer {
         flex-shrink: 0;
     }
 
-}
-
 
 /* ===== Moodboard ===== */
 .moodboard-section {
@@ -631,6 +629,8 @@ footer {
         display: none;
     }
 
+
+}
 
 }
 

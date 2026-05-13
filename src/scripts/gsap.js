@@ -72,57 +72,6 @@ const animateProjectPageText = () => {
 };
 
 
-const animateProjectPageSections = ({ textDuration = 0.7, mediaDuration = 0.9, stagger = 0.1, overlap = -0.35 } = {}) => {
-  document.querySelectorAll(".moodboard-section").forEach((section) => {
-    const sectionText = section.querySelectorAll(
-      ".moodboard-texts > *, .moodboard-description > *, .moodboard-texts h3, .moodboard-texts .hashtag"
-    );
-    const sectionMedia = section.querySelectorAll(".moodboard-image img, .moodboard-image video");
-
-    if (prefersReducedMotion) {
-      gsap.set(sectionText, { opacity: 1, y: 0 });
-      gsap.set(sectionMedia, { opacity: 1, x: 0, y: 0, scale: 1 });
-      return;
-    }
-
-    const sectionTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top 76%",
-        once: true,
-      },
-    });
-
-    if (sectionText.length) {
-      sectionTimeline.fromTo(
-        sectionText,
-        { opacity: 0, y: 24 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: textDuration,
-          ease: "power3.out",
-          stagger,
-        }
-      );
-    }
-
-    if (sectionMedia.length) {
-      sectionTimeline.fromTo(
-        sectionMedia,
-        { opacity: 0, y: 36, scale: 0.98 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: mediaDuration,
-          ease: "power3.out",
-        },
-        sectionText.length ? `-=${Math.abs(overlap)}` : 0
-      );
-    }
-  });
-};
 
 const animateProjectPageCallout = () => {
   document.querySelectorAll(".double_diamond--title, .umwelt--title").forEach((title) => {

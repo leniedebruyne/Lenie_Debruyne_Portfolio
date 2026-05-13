@@ -673,6 +673,12 @@ footer {
     margin-top: 1.5rem !important;
 }
 
+/* Specific border for the Monkeyshot and Starship project cards */
+.projects-grid .moodboard-content#monkeyshot,
+.projects-grid .moodboard-content#starship {
+    border: 2px solid var(--c-dark-green);
+}
+
 
 
 /* strip separator animation—make strips slightly taller on large screens */

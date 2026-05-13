@@ -681,6 +681,7 @@ p {
 
 .scroll-wrapper {
     position: relative;
+    top: -5rem;
     overflow: hidden;
     padding: 0 4rem;
     /* ruimte voor de pijltjes */
