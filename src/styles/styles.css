@@ -753,20 +753,18 @@ p {
 
 footer {
     background-color: var(--c-dark-green);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     padding: 2rem 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
 }
 
 .footer-text {
     color: var(--c-beige);
     font-size: 25px;
-    text-decoration: none;
-
 }
 
 .footer-text a {
@@ -794,6 +792,14 @@ footer {
     width: 100%;
     height: 12rem;
     gap: 2rem;
+}
+
+.contact {
+    margin-left: -33rem;
+}
+
+.connect {
+    margin-right: -33rem;
 }
 
 .footer-text img[alt="LinkedIn icoon"],
@@ -1167,8 +1173,8 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         height: auto;
-        gap: 1.5rem;
-        width: 90%;
+        gap: 0.75rem;
+        width: 100%;
     }
 
     .contact,
@@ -1177,6 +1183,11 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        margin: 0;
+    }
+
+    .footer-banner {
+        display: none;
     }
 
     .footer-text {
@@ -1205,18 +1216,6 @@ footer {
         height: 20px;
         flex-shrink: 0;
     }
-
-    .footer-banner {
-        font-size: 2.5rem;
-        margin-top: 1.5rem;
-        margin-bottom: 0;
-        height: auto;
-        padding: 0 1rem;
-        word-break: break-word;
-    }
-
-
-
 
 }
 

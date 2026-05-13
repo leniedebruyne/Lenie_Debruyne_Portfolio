@@ -153,31 +153,18 @@ const animateProjectPageCallout = () => {
 export const animateProjectPage = () => {
   animateProjectPageTitle();
   animateProjectPageText();
-  animateProjectPageSections();
   animateProjectPageCallout();
 };
 
 export const animateDesignPage = () => {
   animateProjectPageTitle();
   animateProjectPageText();
-  animateProjectPageSections({
-    textDuration: 0.55,
-    mediaDuration: 0.7,
-    stagger: 0.08,
-    overlap: -0.2,
-  });
   animateProjectPageCallout();
 };
 
 export const animateMotionPage = () => {
   animateProjectPageTitle();
   animateProjectPageText();
-  animateProjectPageSections({
-    textDuration: 0.55,
-    mediaDuration: 0.7,
-    stagger: 0.08,
-    overlap: -0.2,
-  });
   animateProjectPageCallout();
   typingDesignPage();
 };

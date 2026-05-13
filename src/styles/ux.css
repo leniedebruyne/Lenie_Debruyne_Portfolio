@@ -100,6 +100,14 @@ footer {
     gap: 2rem;
 }
 
+.contact {
+    margin-left: -33rem;
+}
+
+.connect {
+    margin-right: -33rem;
+}
+
 .footer-text img[alt="LinkedIn icoon"],
 .footer-text img[alt="Behance icoon"] {
     position: relative;
@@ -198,7 +206,7 @@ footer {
     flex-direction: column;
     margin: 0 auto;
     margin-top: 5rem;
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
     padding: 18px 20px;
     color: rgba(29, 43, 26, 0.95);
 }
@@ -673,31 +681,6 @@ footer {
     padding: 0.75rem 0;
 }
 
-/* ===== Larger than laptop adjustments ===== */
-@media (min-width: 1201px) {
-    .moodboard-section {
-        padding: 10rem 3rem;
-    }
-
-    .moodboard-content {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 4rem;
-    }
-
-    .dubble-diamond--text {
-        transform: translateY(-60px);
-        padding: 3.5rem;
-    }
-
-    .work--carousel {
-        gap: 80px;
-        padding: 6rem 80px;
-    }
-}
 
 /* ===== MOBILE FIRST ===== */
 @media (max-width: 768px) {
@@ -710,8 +693,8 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         height: auto;
-        gap: 1.5rem;
-        width: 90%;
+        gap: 0.75rem;
+        width: 100%;
     }
 
     .contact,
@@ -720,6 +703,11 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        margin: 0;
+    }
+
+    .footer-banner {
+        display: none;
     }
 
     .footer-text {
@@ -749,15 +737,6 @@ footer {
         flex-shrink: 0;
     }
 
-    .footer-banner {
-        font-size: 2.5rem;
-        margin-top: 1.5rem;
-        margin-bottom: 0;
-        height: auto;
-        padding: 0 1rem;
-        word-break: break-word;
-    }
-
     /* ===== Header ===== */
 
     .design--header-title {
@@ -781,7 +760,6 @@ footer {
     /* ===== intro text ===== */
     .design--header-text {
         margin-top: 2.5rem;
-        margin-bottom: 5rem;
     }
 
     .double_diamond--title,
@@ -1031,3 +1009,31 @@ footer {
     }
 
 }
+
+
+
+/* ===== Larger than laptop adjustments ===== */
+/* @media (min-width: 1201px) {
+    .moodboard-section {
+        padding: 10rem 3rem;
+    }
+
+    .moodboard-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .dubble-diamond--text {
+        transform: translateY(-60px);
+        padding: 3.5rem;
+    }
+
+    .work--carousel {
+        gap: 80px;
+        padding: 6rem 80px;
+    }
+} */
