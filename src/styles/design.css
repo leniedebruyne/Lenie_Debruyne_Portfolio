@@ -311,7 +311,7 @@ footer {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    background-color: var(--c-beige);
+    background-color: #f6f6f2;
 }
 
 .card--content h2 {
@@ -381,6 +381,10 @@ footer {
     display: flex;
     justify-content: center;
     padding: 5rem 2rem;
+}
+
+.moodboard-section--reverse .moodboard-content {
+    flex-direction: row-reverse;
 }
 
 .moodboard-content {
@@ -566,6 +570,10 @@ footer {
         align-items: center;
         width: 100%;
         max-width: none;
+    }
+
+    .moodboard-section--reverse .moodboard-content {
+        flex-direction: column;
     }
 
     .moodboard-texts {

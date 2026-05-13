@@ -72,7 +72,7 @@ const animateProjectPageText = () => {
 };
 
 
-const animateProjectPageSections = () => {
+const animateProjectPageSections = ({ textDuration = 0.7, mediaDuration = 0.9, stagger = 0.1, overlap = -0.35 } = {}) => {
   document.querySelectorAll(".moodboard-section").forEach((section) => {
     const sectionText = section.querySelectorAll(
       ".moodboard-texts > *, .moodboard-description > *, .moodboard-texts h3, .moodboard-texts .hashtag"
@@ -100,9 +100,9 @@ const animateProjectPageSections = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 0.7,
+          duration: textDuration,
           ease: "power3.out",
-          stagger: 0.1,
+          stagger,
         }
       );
     }
@@ -115,10 +115,10 @@ const animateProjectPageSections = () => {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 0.9,
+          duration: mediaDuration,
           ease: "power3.out",
         },
-        sectionText.length ? "-=0.35" : 0
+        sectionText.length ? `-=${Math.abs(overlap)}` : 0
       );
     }
   });
@@ -154,6 +154,32 @@ export const animateProjectPage = () => {
   animateProjectPageTitle();
   animateProjectPageText();
   animateProjectPageSections();
+  animateProjectPageCallout();
+  typingDesignPage();
+};
+
+export const animateDesignPage = () => {
+  animateProjectPageTitle();
+  animateProjectPageText();
+  animateProjectPageSections({
+    textDuration: 0.55,
+    mediaDuration: 0.7,
+    stagger: 0.08,
+    overlap: -0.2,
+  });
+  animateProjectPageCallout();
+  typingDesignPage();
+};
+
+export const animateMotionPage = () => {
+  animateProjectPageTitle();
+  animateProjectPageText();
+  animateProjectPageSections({
+    textDuration: 0.55,
+    mediaDuration: 0.7,
+    stagger: 0.08,
+    overlap: -0.2,
+  });
   animateProjectPageCallout();
   typingDesignPage();
 };
