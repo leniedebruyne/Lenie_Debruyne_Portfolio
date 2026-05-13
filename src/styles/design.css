@@ -824,6 +824,9 @@ footer {
         margin: 0 auto;
     }
 
+    .footer-info {
+        padding: 0 20rem;
+    }
 
 
 }

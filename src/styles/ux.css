@@ -337,7 +337,7 @@ footer {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: #f6f6f2;
 }
 
 .card--content h2 {
@@ -554,7 +554,7 @@ footer {
     color: var(--c-beige);
     padding: 2rem;
     border-radius: 0.1rem;
-    box-shadow: 0 0 0 1rem white;
+    box-shadow: 0 0 0 1rem #f6f6f2;
     text-align: center;
     z-index: 1;
     position: relative;
@@ -688,7 +688,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 2rem;
-    background: #ffffff;
+    background: #fdfdfc;
     /* higher contrast than beige background */
     padding: 1.25rem;
     border-radius: 14px;
@@ -901,6 +901,19 @@ footer {
     .design--header-text {
         margin-top: 2rem;
         margin-bottom: 5rem;
+    }
+
+    .double_diamond--title,
+    .umwelt--title {
+        margin-bottom: 1.25rem;
+    }
+
+    .umwelt--title {
+        margin-top: 5rem;
+    }
+
+    .dubble-diamond--text {
+        margin-top: 0;
     }
 
     /* ===== navigation on site ===== */
@@ -1175,6 +1188,10 @@ footer {
     .content--page {
         max-width: 1600px;
         margin: 0 auto;
+    }
+
+    .footer-info {
+        padding: 0 20rem;
     }
 
 }

@@ -253,16 +253,25 @@ footer {
 
 .work--carousel {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    padding: 50px 20px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 150px;
+    padding: 50px 40px;
     background-color: var(--c-beige);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
     margin-top: -7rem;
 }
 
+.work--carousel::-webkit-scrollbar {
+    display: none;
+}
+
 .card {
+    flex: 0 0 auto;
     border: 2px solid var(--c-dark-green);
     border-radius: 20px;
     overflow: hidden;
@@ -818,6 +827,19 @@ footer {
         margin-bottom: 6rem;
     }
 
+    .work--carousel {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        gap: 7rem;
+        padding: 2rem 1rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
 }
 
 /* ===== Monitor ===== */
@@ -826,6 +848,10 @@ footer {
     .content--page {
         max-width: 1600px;
         margin: 0 auto;
+    }
+
+    .footer-info {
+        padding: 0 20rem;
     }
 
 
