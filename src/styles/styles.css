@@ -10,10 +10,6 @@ html {
     box-sizing: inherit;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 :root {
     --font-bodycopy: "Noto Sans", sans-serif;
     --font-title: "Cormorant Garamond", serif;
@@ -22,16 +18,8 @@ html {
     --c-light-green: #64823E;
     --c-pink: #F4C9C4;
     --c-beige: #F7EFDA;
-
-    /*     --step--2: clamp(0.7813rem, 0.779rem + 0.0112vw, 0.8rem);
-    --step--1: clamp(0.9375rem, 0.93rem + 0.0373vw, 1rem);
-    --step-0: clamp(1.125rem, 1.1101rem + 0.0746vw, 1.25rem);
-    --step-1: clamp(1.35rem, 1.3246rem + 0.1269vw, 1.5625rem);
-    --step-2: clamp(1.62rem, 1.5802rem + 0.1989vw, 1.9531rem);
-    --step-3: clamp(1.944rem, 1.8846rem + 0.297vw, 2.4414rem);
-    --step-4: clamp(2.3328rem, 2.247rem + 0.4292vw, 3.0518rem);
-    --step-5: clamp(2.7994rem, 2.6781rem + 0.6062vw, 3.8147rem); */
 }
+
 
 body {
     overflow-x: hidden;
@@ -43,6 +31,24 @@ body {
 
 .badge-link {
     all: unset;
+}
+
+.badge,
+.card--button,
+.footer-link {
+    cursor: pointer;
+}
+
+.badge:focus-visible,
+.card--button:focus-visible,
+.footer-link:focus-visible {
+    outline: 2px solid var(--c-light-green);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+.badge {
+    transition: transform 0.2s ease, outline 0.2s ease;
 }
 
 
@@ -119,7 +125,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    z-index: 1;
+    z-index: 5;
 }
 
 .badges .badge {
@@ -209,10 +215,10 @@ p {
     white-space: nowrap;
     padding: 0.5rem 0;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 200% !important;
     margin-left: -30rem;
-    margin-top: -14rem;
+    margin-top: -2rem;
 }
 
 .strip-inner--introduce {
@@ -266,7 +272,7 @@ p {
     gap: 2rem;
     padding: 2rem;
     align-items: flex-start;
-    z-index: 3;
+    z-index: 4;
 }
 
 .about img {
@@ -306,19 +312,21 @@ p {
 
 
 .about-title {
-    position: absolute;
-    margin-top: 18rem;
-    margin-left: -35rem;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
 }
 
 .education .about-title {
-    margin-left: -42rem;
+    text-align: center;
 }
 
 
 .skills-education {
     position: relative;
-    z-index: 10;
+    z-index: 6;
     display: flex;
     justify-content: space-between;
     border-top: 2px solid var(--c-dark-green);
@@ -498,7 +506,14 @@ p {
     border: 2px solid var(--c-dark-green);
     font-weight: 700;
     transition: all 0.2s ease;
+    cursor: pointer;
 }
+
+.personal-project-link:focus-visible {
+    outline: 2px solid var(--c-light-green);
+    outline-offset: 2px;
+}
+
 
 .personal-project-link:hover,
 .personal-project-link:focus-visible {
@@ -600,10 +615,9 @@ p {
     border-radius: 0.1rem;
     box-shadow: 0 0 0 1rem white;
     text-align: center;
-    z-index: 1;
+    z-index: 10;
     position: relative;
-    top: -300px;
-    margin-bottom: -200px;
+    margin-bottom: 2rem;
 }
 
 
@@ -771,7 +785,11 @@ footer {
 .footer-text a {
     color: var(--c-beige);
     text-decoration: none;
+    transition: opacity 0.2s ease;
+}
 
+.footer-text a:hover {
+    opacity: 0.8;
 }
 
 .footer-banner {
@@ -796,11 +814,11 @@ footer {
 }
 
 .contact {
-    margin-left: -33rem;
+    margin-left: auto;
 }
 
 .connect {
-    margin-right: -33rem;
+    margin-right: auto;
 }
 
 .footer-text img[alt="LinkedIn icoon"],
@@ -1303,13 +1321,29 @@ footer {
 
 }
 
+/* ===== DESKTOP ===== */
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+    .about-title,
+    .education .about-title {
+        transform: none;
+        margin: 0 0 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
 
 /* ===== Monitor ===== */
 @media (min-width: 1201px) {
 
-    .content--page {
-        max-width: 1600px;
-        margin: 0 auto;
+    .about-title,
+    .education .about-title {
+        transform: none;
+        margin: 0 0 1.5rem;
+        text-align: center;
+        width: 100%;
     }
 
     .footer-info {

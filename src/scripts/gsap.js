@@ -115,7 +115,6 @@ export const animateMotionPage = () => {
   animateProjectPageTitle();
   animateProjectPageText();
   animateProjectPageCallout();
-  typingDesignPage();
 };
 
 export const wiggleBadges = () => {

@@ -9,10 +9,6 @@ html {
     box-sizing: inherit;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 :root {
     --font-bodycopy: "Noto Sans", sans-serif;
     --font-title: "Cormorant Garamond", serif;
@@ -21,15 +17,6 @@ html {
     --c-light-green: #64823E;
     --c-pink: #F4C9C4;
     --c-beige: #F7EFDA;
-
-    /*     --step--2: clamp(0.7813rem, 0.779rem + 0.0112vw, 0.8rem);
-    --step--1: clamp(0.9375rem, 0.93rem + 0.0373vw, 1rem);
-    --step-0: clamp(1.125rem, 1.1101rem + 0.0746vw, 1.25rem);
-    --step-1: clamp(1.35rem, 1.3246rem + 0.1269vw, 1.5625rem);
-    --step-2: clamp(1.62rem, 1.5802rem + 0.1989vw, 1.9531rem);
-    --step-3: clamp(1.944rem, 1.8846rem + 0.297vw, 2.4414rem);
-    --step-4: clamp(2.3328rem, 2.247rem + 0.4292vw, 3.0518rem);
-    --step-5: clamp(2.7994rem, 2.6781rem + 0.6062vw, 3.8147rem); */
 }
 
 body {
@@ -57,6 +44,7 @@ body {
 
 a {
     text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 footer {
@@ -100,11 +88,11 @@ footer {
 }
 
 .contact {
-    margin-left: -33rem;
+    margin-left: auto;
 }
 
 .connect {
-    margin-right: -33rem;
+    margin-right: auto;
 }
 
 .footer-text img[alt="LinkedIn icoon"],
@@ -298,13 +286,18 @@ footer {
     font-size: 1em;
     cursor: pointer;
     align-self: flex-start;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, outline 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card--button:hover {
     background-color: var(--c-light-green);
     transform: translateY(-2px);
+}
+
+.card--button:focus-visible {
+    outline: 2px solid var(--c-light-green);
+    outline-offset: 2px;
 }
 
 
@@ -673,9 +666,8 @@ footer {
 /* ===== Monitor ===== */
 @media (min-width: 1201px) {
 
-    .content--page {
-        max-width: 1600px;
-        margin: 0 auto;
+    .work--carousel {
+        justify-content: center;
     }
 
     .footer-info {
