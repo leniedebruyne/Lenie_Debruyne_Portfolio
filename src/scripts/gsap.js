@@ -118,33 +118,39 @@ export const animateMotionPage = () => {
 };
 
 export const wiggleBadges = () => {
+  const badges = gsap.utils.toArray(".badge");
+  if (!badges.length) return;
+
   if (prefersReducedMotion) {
     gsap.set(".badge", { rotate: 0 });
     return;
   }
 
-  document.querySelectorAll(".badge").forEach((badge, index) => {
+  badges.forEach((badge, index) => {
     const tl = gsap.timeline({
       repeat: -1,
-      repeatDelay: 4,
+      repeatDelay: 3.5,
       delay: index * 1,
     });
 
     tl.to(badge, {
-      rotate: 1,
-      duration: 0.2,
+      rotate: 1.5,
+      y: -1,
+      duration: 0.28,
       ease: "sine.inOut",
     })
       .to(badge, {
-        rotate: -2,
-        duration: 0.2,
+        rotate: -1.5,
+        y: 0,
+        duration: 0.28,
         ease: "sine.inOut",
         yoyo: true,
         repeat: 2,
       })
       .to(badge, {
         rotate: 0,
-        duration: 0.2,
+        y: 0,
+        duration: 0.28,
         ease: "sine.inOut",
       });
   });
@@ -199,12 +205,15 @@ export const typingTitle = () => {
 };
 
 export const pulse2025 = () => {
+  const projectCopy = document.querySelector(".project-box p");
+  if (!projectCopy) return;
+
   if (prefersReducedMotion) {
     gsap.set(".project-box p", { scale: 1 });
     return;
   }
 
-  gsap.to(".project-box p", {
+  gsap.to(projectCopy, {
     scale: 1.1,
     duration: 1,
     ease: "power1.inOut",
