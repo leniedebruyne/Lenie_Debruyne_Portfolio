@@ -336,6 +336,7 @@ footer {
 .moodboard-texts {
     display: flex;
     flex-direction: column;
+    min-width: 500px;
 }
 
 .moodboard-texts h3 {
