@@ -194,7 +194,6 @@ footer {
     margin-bottom: 4rem;
     background-color: var(--c-beige);
     align-items: center;
-    justify-content: center;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -206,6 +205,7 @@ footer {
 
 .card {
     flex: 0 0 auto;
+    scroll-snap-align: start;
     border: 2px solid var(--c-dark-green);
     border-radius: 20px;
     overflow: hidden;
@@ -331,6 +331,10 @@ footer {
     align-items: center;
     max-width: 1200px;
     gap: 50px;
+}
+
+.moodboard-section--reverse .moodboard-content {
+    flex-direction: row-reverse;
 }
 
 .moodboard-texts {

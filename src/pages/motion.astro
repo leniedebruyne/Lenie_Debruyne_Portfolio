@@ -3,6 +3,7 @@
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/motion.css";
+import "../styles/footer.css";
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -99,7 +100,23 @@ const base = import.meta.env.BASE_URL;
           </div>
         </div>
 
-        <!-- Card 3: Styleboard -->
+        <!-- Card 3: Cosy fall -->
+        <div class="card Styleboard">
+          <div class="card--image-container">
+            <img src={`${base}images/cosy-fall.png`} alt="cosy fall" />
+          </div>
+          <div class="card--content">
+            <h2>Cosy fall</h2>
+            <p>
+              This project was a fun way to keep practicing my animation skills
+              and explore what I could create with simple After Effects
+              techniques.
+            </p>
+            <a href="#cosy-fall" class="card--button">View more</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Coming soon -->
         <div class="card Styleboard">
           <div class="card--image-container">
             <img src={`${base}images/Comming-soon.png`} alt="Styleboard" />
@@ -114,116 +131,150 @@ const base = import.meta.env.BASE_URL;
           </div>
         </div>
       </section>
+    </div>
 
-      <div class="strip--introduce">
-        <div class="strip-inner--introduce">
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
+    <div class="strip--introduce">
+      <div class="strip-inner--introduce">
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
 
-          <!-- Herhaling -->
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-          <span class="repeat">Let me show you some of my work</span>
-        </div>
-      </div>
-
-      <section class="moodboard-section" id="after effects">
-        <div class="moodboard-content">
-          <div class="moodboard-texts">
-            <h3>After <br /> Effects</h3>
-            <p class="hashtag">#Motion</p>
-            <div class="moodboard-description">
-              <p>
-                For this assignment, I had to create an animation video for a
-                Kickstarter project. I chose the Cat Basket, a cozy and smart
-                space designed for cats. I picked this concept because I
-                genuinely liked the idea, it’s something I would actually
-                sponser myself.
-              </p>
-              <p>
-                For the animation, I used Illustrator for the illustrations and
-                After Effects for the motion. I really enjoyed this project
-                because I love figuring out how movement can make visuals not
-                only look appealing but also communicate a message effortlessly.
-              </p>
-            </div>
-          </div>
-          <div class="moodboard-image">
-            <video controls muted loop>
-              <source src={`${base}videos/animation.mp4`} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </section>
-
-      <section class="moodboard-section" id="blender">
-        <div class="moodboard-content">
-          <div class="moodboard-texts">
-            <h3>Blender</h3>
-            <p class="hashtag">#3D&Motion</p>
-            <div class="moodboard-description">
-              <p>
-                For this assignment, I had to create a Blender scene with some
-                motion in it. We could choose any brand, and I went with
-                McDonald’s. I picked it because its playful, fun, and colorful
-                vibe matched perfectly with Blender’s look and feel.
-              </p>
-              <p>
-                This was my first time working in Blender, and I absolutely
-                loved it. I was amazed by how you can build such detailed,
-                dynamic scenes starting from something as simple as a cube. I
-                really enjoyed every part of this project and I’m super proud of
-                the final result.
-              </p>
-            </div>
-          </div>
-          <div class="moodboard-image">
-            <video controls muted loop>
-              <source src={`${base}videos/blender_vid.mp4`} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </section>
-
-      <div class="strip--work">
-        <div class="strip-inner--work">
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-
-          <!-- Herhaling -->
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-          <span class="repeat">Let's work together</span>
-        </div>
+        <!-- Herhaling -->
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
+        <span class="repeat">Let me show you some of my work</span>
       </div>
     </div>
-    <!-- Footer -->
-    <Footer />
+
+    <section class="moodboard-section" id="after effects">
+      <div class="moodboard-content">
+        <div class="moodboard-texts">
+          <h3>Kick<br /> Starter</h3>
+          <p class="hashtag">#Motion</p>
+          <div class="moodboard-description">
+            <p>
+              For this assignment, I had to create an animation video for a
+              Kickstarter project. I chose the Cat Basket, a cozy and smart
+              space designed for cats. I picked this concept because I genuinely
+              liked the idea, it’s something I would actually sponser myself.
+            </p>
+            <p>
+              For the animation, I used Illustrator for the illustrations and
+              After Effects for the motion. I really enjoyed this project
+              because I love figuring out how movement can make visuals not only
+              look appealing but also communicate a message effortlessly.
+            </p>
+          </div>
+        </div>
+        <div class="moodboard-image">
+          <video controls muted loop>
+            <source src={`${base}videos/animation.mp4`} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="moodboard-section moodboard-section--reverse" id="blender">
+      <div class="moodboard-content">
+        <div class="moodboard-texts">
+          <h3>MCdonald's</h3>
+          <p class="hashtag">#3D&Motion</p>
+          <div class="moodboard-description">
+            <p>
+              For this assignment, I had to create a Blender scene with some
+              motion in it. We could choose any brand, and I went with
+              McDonald’s. I picked it because its playful, fun, and colorful
+              vibe matched perfectly with Blender’s look and feel.
+            </p>
+            <p>
+              This was my first time working in Blender, and I absolutely loved
+              it. I was amazed by how you can build such detailed, dynamic
+              scenes starting from something as simple as a cube. I really
+              enjoyed every part of this project and I’m super proud of the
+              final result.
+            </p>
+          </div>
+        </div>
+        <div class="moodboard-image">
+          <video controls muted loop>
+            <source src={`${base}videos/blender_vid.mp4`} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- new -->
+    <section class="moodboard-section" id="cosy-fall">
+      <div class="moodboard-content">
+        <div class="moodboard-texts">
+          <h3>Cosy fall</h3>
+          <p class="hashtag">#CosyFall</p>
+          <div class="moodboard-description">
+            <p>
+              I started this project during the summer as a way to keep
+              practicing and improving my animation skills. I wanted to create
+              something completely from scratch, starting with a fun
+              illustration made entirely in Illustrator. Once the illustration
+              was finished, I brought it into After Effects and experimented
+              with different ways to bring it to life.
+            </p>
+            <p>
+              I focused on using basic animation principles and simple After
+              Effects techniques to create movement that still felt fun and
+              dynamic. Even though the animation was made with fairly simple
+              methods, I challenged myself to push them as far as possible and
+              turn a static illustration into something that feels alive. I
+              really enjoyed experimenting with the movement and am very happy
+              with how the final result turned out.
+            </p>
+          </div>
+        </div>
+        <div class="moodboard-image">
+          <video controls muted loop>
+            <source src={`${base}videos/cosy-fall.mp4`} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip--work">
+      <div class="strip-inner--work">
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+
+        <!-- Herhaling -->
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+        <span class="repeat">Let's work together</span>
+      </div>
+    </div>
   </body>
+  <!-- Footer -->
+  <Footer />
 </html>
 
 <script>

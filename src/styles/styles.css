@@ -733,10 +733,24 @@ p {
     text-decoration: none;
     color: inherit;
     display: inline-block;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.commission__browser-url:hover {
-    color: var(--c-dark-green);
+.commission__browser-link:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.commission__browser-link:hover .commission__browser-url {
+    color: var(--c-light-green);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+.commission__browser-link:focus-visible {
+    outline: 2px solid var(--c-light-green);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 .commission__browser-url {
@@ -952,7 +966,10 @@ p {
 }
 
 
-
+.cosy-fall-video {
+    max-width: 690px;
+    max-height: 557px;
+}
 
 
 
