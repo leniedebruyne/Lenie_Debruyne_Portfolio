@@ -236,6 +236,151 @@ const base = import.meta.env.BASE_URL;
         </section>
       </div>
 
+      <section class="commission" id="commission">
+        <div class="commission__intro">
+          <p class="commission__eyebrow">Commission</p>
+          <h3>A real client project from start to finish</h3>
+          <p class="commission__lead">
+            Two artists contacted me because they wanted a website that could
+            present their artwork in a unique and engaging way. What started as
+            a website project grew into a broader visual identity.
+          </p>
+        </div>
+
+        <div class="commission__story">
+          <article class="commission__text-block">
+            <p>
+              I got the opportunity to lead a project completely on my own,
+              outside of a school assignment. That made it feel very different
+              from my other work, because I was responsible for the direction,
+              the decisions, and the final result.
+            </p>
+
+            <p>
+              During the project, the scope grew beyond the website. I also
+              designed flyers, business cards and outdoor signs to create a
+              consistent visual identity across their communication.
+            </p>
+          </article>
+
+          <article
+            class="commission__text-block commission__text-block--learned"
+          >
+            <p class="commission__label">What I learned</p>
+            <p>
+              Working on a real project from start to finish taught me how to
+              connect a purchased domain to GitHub and host a website, but it
+              also taught me a lot about communicating with clients.
+            </p>
+
+            <p>
+              One of the biggest lessons I took away was that you do not need to
+              ask the client for approval at every single step. As a designer,
+              you also need to trust your own expertise and make decisions for
+              the project yourself.
+            </p>
+
+            <p>
+              I also learned that showing unfinished work can sometimes create
+              unnecessary confusion, because clients do not always see how the
+              final result will come together.
+            </p>
+          </article>
+
+          <p class="commission__closing">
+            Overall, I really enjoyed being able to take ownership of a project
+            like this. I am very grateful that I got the opportunity to work
+            with real clients and experience what it is like to lead a project
+            from beginning to end.
+          </p>
+        </div>
+
+        <div class="commission__chapter">
+          <div class="commission__chapter-head">
+            <p class="commission__step">02</p>
+            <div>
+              <p class="commission__label">The work</p>
+              <h4>Mockups</h4>
+            </div>
+          </div>
+
+          <div class="commission__mockups">
+            <figure class="commission__mockup commission__mockup--hero">
+              <div class="commission__mockup-media">
+                <img
+                  src={`${base}images/mockups/flyer.png`}
+                  alt="Flyer mockup for the commission"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>Flyers</figcaption>
+            </figure>
+
+            <figure
+              class="commission__mockup commission__mockup--stacked commission__mockup--card"
+            >
+              <div class="commission__mockup-media">
+                <img
+                  src={`${base}images/mockups/card.png`}
+                  alt="Business card mockup for the commission"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>Business cards</figcaption>
+            </figure>
+
+            <figure
+              class="commission__mockup commission__mockup--stacked commission__mockup--plate"
+            >
+              <div class="commission__mockup-media">
+                <img
+                  src={`${base}images/mockups/plate.png`}
+                  alt="Outdoor sign mockup for the commission"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>Outdoor signs</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="commission__chapter commission__chapter--website">
+          <div class="commission__chapter-head">
+            <p class="commission__step">03</p>
+            <div>
+              <p class="commission__label">The website</p>
+              <h4>Scrollable preview</h4>
+            </div>
+          </div>
+
+          <figure class="commission__browser">
+            <div class="commission__browser-frame">
+              <div class="commission__browser-bar">
+                <a
+                  href="https://zultebekesculptures.be"
+                  target="_blank"
+                  class="commission__browser-link"
+                >
+                  <span class="commission__browser-url"
+                    >zultebekesculptures.be</span
+                  >
+                </a>
+
+                <span class="commission__browser-tag">scroll to explore</span>
+              </div>
+
+              <div class="commission__browser-window" tabindex="0">
+                <img
+                  src={`${base}images/mockups/site.png`}
+                  alt="Scrollable website preview for Zultebeke Sculptures"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
       <section class="personal-project">
         <h3 class="personal-project--tittle">Verdéa Botanics</h3>
         <p>
@@ -420,6 +565,9 @@ const base = import.meta.env.BASE_URL;
 
     import { typingTitle } from "../scripts/gsap.js";
     typingTitle();
+
+    import { animateCommissionSection } from "../scripts/gsap.js";
+    animateCommissionSection();
 
     import { pulse2025 } from "../scripts/gsap.js";
     pulse2025();

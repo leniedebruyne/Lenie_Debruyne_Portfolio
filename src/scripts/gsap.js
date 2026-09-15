@@ -99,6 +99,75 @@ const animateProjectPageCallout = () => {
   });
 };
 
+const animateCommission = () => {
+  const section = document.querySelector(".commission");
+  if (!section) return;
+
+  const intro = section.querySelector(".commission__intro");
+  const storyBlocks = gsap.utils.toArray(
+    section.querySelectorAll(".commission__story .commission__text-block, .commission__closing")
+  );
+  const mockupChapters = gsap.utils.toArray(
+    section.querySelectorAll(".commission__chapter-head, .commission__mockup")
+  );
+  const browser = section.querySelector(".commission__browser");
+
+  if (prefersReducedMotion) {
+    gsap.set([intro, storyBlocks, mockupChapters, browser], {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      scale: 1,
+      rotate: 0,
+    });
+    return;
+  }
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "top 72%",
+      once: true,
+    },
+  });
+
+  tl.fromTo(
+    intro,
+    { opacity: 0, y: 20 },
+    { opacity: 1, y: 0, duration: 0.75, ease: "power2.out" }
+  )
+    .fromTo(
+      storyBlocks,
+      { opacity: 0, y: 18 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.08,
+      },
+      "-=0.15"
+    )
+    .fromTo(
+      mockupChapters,
+      { opacity: 0, y: 18 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.55,
+        ease: "power2.out",
+        stagger: 0.06,
+      },
+      "-=0.35"
+    )
+    .fromTo(
+      browser,
+      { opacity: 0, y: 24, scale: 0.985 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "power3.out" },
+      "-=0.25"
+    );
+};
+
 export const animateProjectPage = () => {
   animateProjectPageTitle();
   animateProjectPageText();
@@ -220,5 +289,9 @@ export const pulse2025 = () => {
     repeat: -1,
     yoyo: true,
   });
+};
+
+export const animateCommissionSection = () => {
+  animateCommission();
 };
 
