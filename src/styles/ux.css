@@ -28,21 +28,17 @@ body {
     background-color: var(--c-beige);
 }
 
-.double_diamond--title {
+.double_diamond--title,
+.umwelt--title {
     font-family: var(--font-title);
-    font-size: 75px;
-    font-weight: 300;
+    font-size: clamp(3rem, 6vw, 4.8rem);
+    font-weight: 400;
+    line-height: 1;
     text-align: center;
-    margin: 0 auto 0.65rem;
-    margin-top: 7rem;
+    margin: 5rem auto 1rem;
 }
 
 .umwelt--title {
-    font-family: var(--font-title);
-    font-size: 75px;
-    font-weight: 300;
-    text-align: center;
-    margin: 3rem auto 0.65rem;
     margin-top: 7rem;
 }
 
@@ -50,89 +46,29 @@ a {
     text-decoration: none;
 }
 
-footer {
-    background-color: var(--c-dark-green);
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-text {
-    color: var(--c-beige);
-    font-size: 25px;
-}
-
-.footer-text a {
-    color: var(--c-beige);
-    text-decoration: none;
-
-}
-
-.footer-banner {
-    margin-top: 20px;
-    margin-bottom: -30px;
-    color: var(--c-beige);
-    font-weight: 600;
-    font-size: 115px;
-    line-height: 1;
-    text-align: center;
-    overflow: hidden;
-    height: 80px;
-}
-
-
-.footer-info {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 12rem;
-    gap: 2rem;
-}
-
-.contact {
-    margin-left: auto;
-}
-
-.connect {
-    margin-right: auto;
-}
-
-.footer-text img[alt="LinkedIn icoon"],
-.footer-text img[alt="Behance icoon"] {
-    position: relative;
-    top: 5px;
-}
-
-
-
-
 .badge-link {
     all: unset;
 }
 
-
 .design--header-title {
-    font-family: var(--font-title);
+    font-family: var(--font-bodycopy);
     text-align: center;
-    line-height: 0.9;
+    line-height: 0.95;
     width: min(100%, 920px);
     margin: clamp(2.5rem, 6vw, 4.5rem) auto 0;
     padding: 0 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.35rem;
+    gap: 0.45rem;
 }
 
-
-/* Base styles for all title spans (outline effect) */
 .design--header-title span {
     display: block;
     position: static;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     white-space: nowrap;
 }
 
@@ -140,74 +76,84 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.45rem;
+    gap: 0.25rem;
 }
 
-/* Specific styles for 'Visual' */
 .design--header-title .visual-word {
     font-family: var(--font-bodycopy);
-    font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+    font-size: clamp(1rem, 2.1vw, 1.35rem);
     font-weight: 700;
     color: var(--c-light-green);
-    -webkit-text-stroke: 0;
-    -webkit-text-fill-color: var(--c-light-green);
-    letter-spacing: 0.28em;
-    margin-bottom: 2rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 0.5rem;
 }
 
-
-/* Specific styles for 'DESIGNER' */
-.design--header-title .designer-word {
-    font-size: clamp(2.8rem, 9vw, 6.5rem);
+.design--header-title .designer-word,
+.design--header-title .portfolio-word {
     color: var(--c-dark-green);
     -webkit-text-stroke: 0;
     -webkit-text-fill-color: var(--c-dark-green);
-    font-weight: 500;
-    letter-spacing: 0.02em;
 }
 
-/* Specific styles for 'PORTFOLIO' */
+.design--header-title .designer-word {
+    font-family: var(--font-bodycopy);
+    font-size: clamp(2.8rem, 8vw, 6.25rem);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
 .design--header-title .portfolio-word {
     display: inline-flex;
     align-items: baseline;
     font-family: var(--font-bodycopy);
-    font-size: clamp(3rem, 9vw, 6.5rem);
-    -webkit-text-stroke: 0;
-    -webkit-text-fill-color: var(--c-dark-green);
-    color: var(--c-dark-green);
+    font-size: clamp(3rem, 8.5vw, 6.25rem);
     font-weight: 800;
     letter-spacing: 0.02em;
     margin-top: -0.05em;
 }
 
-/* Specific styles for the green 'L' */
 .design--header-title .green-l {
+    color: var(--c-light-green);
     -webkit-text-stroke: 0;
     -webkit-text-fill-color: var(--c-light-green);
-    color: var(--c-light-green);
     font-weight: 800;
     letter-spacing: 0;
 }
 
-/* General text styles */
 .design--header-text {
-    max-width: 760px;
+    width: min(100%, 760px);
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    margin-top: 5rem;
-    margin-bottom: 12rem;
-    padding: 18px 20px;
-    color: rgba(29, 43, 26, 0.95);
+    margin: 3.5rem auto 9rem;
+    padding: 0 1.25rem;
+    color: var(--c-dark-green);
+    text-align: center;
+    gap: 1rem;
+}
+
+.design--header-text p {
+    margin: 0;
+    line-height: 1.65;
+    font-size: 1.05rem;
+}
+
+.design--header-text p:first-child {
+    font-family: var(--font-title);
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    line-height: 1.08;
+}
+
+.design--header-text em {
+    font-style: italic;
 }
 
 
 .work--carousel {
     display: flex;
     overflow-x: auto;
-    gap: 150px;
-    padding: 50px 40px;
-    margin-top: calc(-7rem - 50px);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    padding: 3rem 2rem 4rem;
+    margin-top: 0;
     margin-bottom: 4rem;
     scroll-snap-type: x mandatory;
     position: relative;
@@ -233,6 +179,7 @@ footer {
     flex: 0 0 auto;
     border: 2px solid var(--c-dark-green);
     border-radius: 20px;
+    background-color: var(--c-beige);
     overflow: hidden;
     width: 380px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -326,7 +273,6 @@ footer {
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 1.5rem !important;
-    /* ensure spacing for these mini cards */
 }
 
 .mini-card-button:hover {
@@ -525,18 +471,6 @@ footer {
     width: 100%;
 }
 
-.dubble-diamond {
-    display: flex;
-    justify-content: center;
-}
-
-.dubble-diamond--text {
-    max-width: 750px;
-    margin-top: -2rem;
-    margin-bottom: 7rem;
-}
-
-
 .moodboard-section {
     display: flex;
     justify-content: center;
@@ -581,40 +515,28 @@ footer {
     height: auto;
 }
 
-/* ===== Enhanced section styling (below the strip) ===== */
-.dubble-diamond,
-.moodboard-section,
-.work--carousel+.strip--work,
-.coming-soon {
-    position: relative;
-}
-
-/* subtle angled background to match home vibe */
 .dubble-diamond {
     background: transparent;
-    padding: 1.9rem 2rem 1.75rem;
-    border-top: none;
-    border-bottom: none;
+    padding: 1.5rem 2rem 2rem;
     display: flex;
     flex-direction: column;
-    /* place intro above the projects so copy can breathe */
-    gap: 0.95rem;
+    gap: 1rem;
     align-items: center;
 }
 
 .dubble-diamond--text {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(247, 239, 218, 0.95);
     padding: 1.6rem 1.8rem;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    transform: translateY(-10px);
+    border-radius: 20px;
+    border: 2px solid var(--c-dark-green);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     max-width: 820px;
-    /* center and allow breathing room */
     text-align: center;
     margin: 0;
+    color: var(--c-dark-green);
+    line-height: 1.7;
 }
 
-/* create a two-column project grid on larger screens */
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -630,25 +552,23 @@ footer {
     display: flex;
     align-items: center;
     gap: 2rem;
-    background: #fdfdfc;
-    /* higher contrast than beige background */
+    background: var(--c-beige);
     padding: 1.25rem;
-    border-radius: 14px;
-    border: 1px solid rgba(29, 43, 26, 0.06);
+    border-radius: 20px;
+    border: 2px solid var(--c-dark-green);
     min-height: 340px;
-    /* keep project cards visually even */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .moodboard-texts h3 {
-    font-size: clamp(2.5rem, 4.5vw, 5.5rem);
-    line-height: 1.05;
+    font-size: clamp(2.4rem, 4.2vw, 5rem);
+    line-height: 1;
 }
 
 .moodboard-image img,
 .moodboard-image video {
-    border-radius: 12px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    transform: rotate(-0.6deg);
+    border-radius: 10px;
     width: 100%;
     height: auto;
     display: block;
@@ -677,133 +597,6 @@ footer {
     border: 2px solid var(--c-dark-green);
 }
 
-/* ===== Scoped UX hierarchy for the requested elements only ===== */
-.dubble-diamond--text,
-.dubble-diamond--text#umwelt {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: clamp(1.15rem, 2.2vw, 1.75rem);
-    background: rgba(255, 251, 244, 0.78);
-    border: 1px solid rgba(29, 43, 26, 0.08);
-    border-left: 4px solid rgba(100, 130, 62, 0.38);
-    border-radius: 24px;
-    box-shadow: 0 14px 32px rgba(29, 43, 26, 0.08);
-    color: rgba(29, 43, 26, 0.94);
-    text-align: left;
-    line-height: 1.9;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-.dubble-diamond--text p,
-.dubble-diamond--text#umwelt p {
-    margin: 0 0 0.85rem;
-}
-
-.dubble-diamond--text p+p,
-.dubble-diamond--text#umwelt p+p {
-    margin-top: 0;
-}
-
-.dubble-diamond--text p:last-child,
-.dubble-diamond--text#umwelt p:last-child {
-    margin-bottom: 0;
-}
-
-.dubble-diamond--text#umwelt {
-    background: linear-gradient(180deg, rgba(255, 253, 248, 0.92), rgba(246, 240, 226, 0.95));
-    border-left-color: rgba(244, 201, 196, 0.95);
-    box-shadow: 0 16px 34px rgba(29, 43, 26, 0.09);
-    margin-bottom: 1.1rem;
-}
-
-.dubble-diamond--projects {
-    width: 100%;
-    margin: 0.1rem 0 1.1rem;
-    padding: 0.9rem;
-    border-radius: 30px;
-    background:
-        linear-gradient(180deg, rgba(255, 251, 244, 0.72), rgba(245, 239, 225, 0.9));
-    border: 1px solid rgba(29, 43, 26, 0.08);
-    box-shadow:
-        0 18px 44px rgba(29, 43, 26, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.75);
-}
-
-.dubble-diamond--projects .projects-grid {
-    gap: 1.25rem;
-}
-
-.dubble-diamond--projects .moodboard-content {
-    flex-direction: row;
-    align-items: center;
-    gap: 1.1rem;
-    padding: 0.95rem;
-    border-radius: 22px;
-    min-height: auto;
-    background: rgba(255, 253, 248, 0.92);
-    border: 1px solid rgba(29, 43, 26, 0.1);
-    box-shadow: 0 12px 28px rgba(29, 43, 26, 0.08);
-    transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
-}
-
-.dubble-diamond--projects .moodboard-content:hover {
-    transform: translateY(-5px);
-    border-color: rgba(100, 130, 62, 0.22);
-    box-shadow: 0 18px 36px rgba(29, 43, 26, 0.12);
-}
-
-.dubble-diamond--projects .moodboard-texts {
-    flex: 1 1 48%;
-    gap: 0.45rem;
-}
-
-.dubble-diamond--projects .moodboard-texts h3 {
-    margin-bottom: 0.35rem;
-    font-size: clamp(2.1rem, 3.9vw, 4.1rem);
-    line-height: 0.98;
-}
-
-.dubble-diamond--projects .hashtag {
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    padding: 0.42rem 0.7rem;
-    margin: 0.35rem 0 0.95rem;
-    border-radius: 999px;
-    background: rgba(100, 130, 62, 0.12);
-    border: 1px solid rgba(100, 130, 62, 0.14);
-    color: var(--c-light-green);
-    font-size: 0.86rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-}
-
-.dubble-diamond--projects .moodboard-description p {
-    margin: 0 0 0.8rem;
-    max-width: 340px;
-    line-height: 1.75;
-}
-
-.dubble-diamond--projects .moodboard-image {
-    order: 0;
-    flex: 1 1 52%;
-    width: 100%;
-    max-width: 420px;
-}
-
-.dubble-diamond--projects .moodboard-image img {
-    box-shadow: 0 14px 26px rgba(29, 43, 26, 0.1);
-    transform: none;
-    border-radius: 18px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-
-
-/* strip separator animation—make strips slightly taller on large screens */
 .strip--introduce,
 .strip--work {
     padding: 0.75rem 0;
@@ -936,8 +729,8 @@ footer {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
-        gap: 7rem;
-        padding: 2rem 1rem;
+        gap: 2rem;
+        padding: 2rem 1rem 3rem;
         scroll-snap-type: x mandatory;
     }
 
@@ -971,7 +764,7 @@ footer {
 
     .moodboard-content {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
         align-items: center;
         width: 100%;
         max-width: none;
@@ -1001,18 +794,18 @@ footer {
 
     .moodboard-texts h3 {
         font-size: 3rem;
-        line-height: 1.1;
+        line-height: 1;
     }
 
     .moodboard-texts .hashtag {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .moodboard-description p {
         max-width: 80%;
         margin-left: auto;
         margin-right: auto;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .moodboard-image {
@@ -1058,7 +851,7 @@ footer {
 
     /* ===== Comming soon ===== */
     .dubble-diamond--text {
-        max-width: 80%;
+        max-width: 100%;
     }
 
     /* =====Banner ===== */
@@ -1100,19 +893,15 @@ footer {
     /* ===== Header ===== */
     .design--header-title {
         margin-top: 2.5rem;
-        gap: 0.25rem;
+        gap: 0.35rem;
     }
 
     .design--header-title-words {
-        gap: 0.3rem;
+        gap: 0.2rem;
     }
 
     .design--header-title .visual-word {
-        margin-bottom: 0.6rem;
-    }
-
-    .design--header-title .portfolio-word {
-        font-size: clamp(2.8rem, 11vw, 5.2rem);
+        margin-bottom: 0.35rem;
     }
 
     .design--header-title .portfolio-word {
@@ -1120,7 +909,7 @@ footer {
     }
 
     .design--header-text {
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-bottom: 6rem;
     }
 
@@ -1139,6 +928,20 @@ footer {
         height: auto;
     }
 
+    .dubble-diamond--projects .moodboard-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dubble-diamond--projects .moodboard-texts {
+        align-items: center;
+        text-align: center;
+    }
+
+    .dubble-diamond--projects .moodboard-description p {
+        max-width: 100%;
+    }
+
 }
 
 /* ===== Monitor ===== */
@@ -1149,31 +952,3 @@ footer {
     }
 
 }
-
-
-
-/* ===== Larger than laptop adjustments ===== */
-/* @media (min-width: 1201px) {
-    .moodboard-section {
-        padding: 10rem 3rem;
-    }
-
-    .moodboard-content {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 4rem;
-    }
-
-    .dubble-diamond--text {
-        transform: translateY(-60px);
-        padding: 3.5rem;
-    }
-
-    .work--carousel {
-        gap: 80px;
-        padding: 6rem 80px;
-    }
-} */
